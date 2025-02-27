@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4aq2c1uvx0ni"]
+[gd_scene load_steps=3 format=3 uid="uid://b4aq2c1uvx0ni"]
 
 [ext_resource type="Texture2D" uid="uid://bii24optsln07" path="res://icon.svg" id="1_msqvv"]
+[ext_resource type="Texture2D" uid="uid://jwwa4jumma0u" path="res://top-car-view-png-34876.png" id="2_w8fwn"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(2048, 1481)
 texture = ExtResource("1_msqvv")
+
+[node name="Top-car-view-png-34876" type="Sprite2D" parent="."]
+position = Vector2(1504.25, 1039)
+scale = Vector2(5.31938, 0.616)
+texture = ExtResource("2_w8fwn")
