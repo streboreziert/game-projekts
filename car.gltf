@@ -1,1 +1,0 @@
-{"asset":{"generator":"Godot Engine v4.3.stable.official@77dcf97d82cbfe4e4615475fa52ca03da645dbd8","version":"2.0"},"extensionsUsed":["GODOT_single_root"],"nodes":[{"children":[1],"name":"Node"},{"children":[2],"name":"Car"},{"children":[3],"name":"Camera2D"},{"name":"data"}],"scene":0,"scenes":[{"nodes":[0]}]}
