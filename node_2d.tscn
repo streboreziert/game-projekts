@@ -1,15 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4aq2c1uvx0ni"]
+[gd_scene load_steps=3 format=3 uid="uid://41a42iadk1b3"]
 
-[ext_resource type="Texture2D" uid="uid://bii24optsln07" path="res://icon.svg" id="1_msqvv"]
-[ext_resource type="Texture2D" uid="uid://jwwa4jumma0u" path="res://top-car-view-png-34876.png" id="2_w8fwn"]
+[ext_resource type="Texture2D" uid="uid://bx62opi8hqqvv" path="res://ROAD_ELEMENTS.png" id="1_nsmvr"]
+[ext_resource type="Texture2D" uid="uid://btnmh77qnpkuo" path="res://ceļš.png" id="2_8ohic"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-2331, -1821)
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(2048, 1481)
-texture = ExtResource("1_msqvv")
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Top-car-view-png-34876" type="Sprite2D" parent="."]
-position = Vector2(1504.25, 1039)
-scale = Vector2(5.31938, 0.616)
-texture = ExtResource("2_w8fwn")
+[node name="RoadElements" type="Sprite2D" parent="."]
+position = Vector2(-1630, -1686)
+rotation = 3.14159
+texture = ExtResource("1_nsmvr")
+
+[node name="RoadElements" type="Sprite2D" parent="RoadElements"]
+position = Vector2(-4174, 0.000366569)
+rotation = 4.71239
+texture = ExtResource("1_nsmvr")
+metadata/_edit_group_ = true
+
+[node name="RoadElements2" type="Sprite2D" parent="RoadElements"]
+position = Vector2(-4174.5, 929.5)
+rotation = 3.14159
+texture = ExtResource("1_nsmvr")
+
+[node name="RoadElements" type="Sprite2D" parent="RoadElements/RoadElements2"]
+position = Vector2(-4174, 0.000366569)
+rotation = 4.71239
+texture = ExtResource("1_nsmvr")
+metadata/_edit_group_ = true
+
+[node name="Ceļš" type="Sprite2D" parent="RoadElements"]
+position = Vector2(-2086.5, 1228.5)
+texture = ExtResource("2_8ohic")
+metadata/_edit_group_ = true
+
+[node name="Ceļš" type="Sprite2D" parent="."]
+position = Vector2(458, -1387)
+texture = ExtResource("2_8ohic")
+metadata/_edit_group_ = true
