@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://fjjmtmanx7pl"]
+[gd_scene load_steps=4 format=3 uid="uid://fjjmtmanx7pl"]
 
 [ext_resource type="Texture2D" uid="uid://ccrt81lwnwsm5" path="res://top-car-view-png-34876.png" id="1_foc8d"]
 [ext_resource type="Script" path="res://car.gd" id="2_vc372"]
 [ext_resource type="Script" path="res://data.gd" id="3_vfyoy"]
-[ext_resource type="PackedScene" uid="uid://bvu1n2j0f8g4y" path="res://CityMap.tscn" id="4_5nqvs"]
 
-[node name="Node" type="Node"]
+[node name="Car" type="Node"]
 
 [node name="Car" type="Sprite2D" parent="."]
 position = Vector2(295, -84)
@@ -19,16 +18,13 @@ ignore_rotation = false
 zoom = Vector2(0.1, 0.1)
 
 [node name="data" type="Label" parent="Car/Camera2D"]
-offset_left = -2505.0
-offset_top = -1282.0
-offset_right = -2013.0
-offset_bottom = -1034.0
+offset_left = -2522.0
+offset_top = 1143.22
+offset_right = -2030.0
+offset_bottom = 1391.22
 scale = Vector2(10, 10)
 text = "test"
 horizontal_alignment = 1
 script = ExtResource("3_vfyoy")
-
-[node name="CityMap" parent="." instance=ExtResource("4_5nqvs")]
-position = Vector2(298, -84)
 
 [connection signal="data" from="Car" to="Car/Camera2D/data" method="_on_car_data"]
