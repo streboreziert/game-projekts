@@ -23,7 +23,7 @@ var debug = ""
 
 func speed_change(delta, input):
 	var air_density = 0.0012
-	var drag_area = 0.5
+	var drag_area = 2
 	var resistance = 0.0
 	
 	#var D_speed = 0
@@ -44,8 +44,8 @@ func speed_change(delta, input):
 			#flag = 1
 		
 		#D_speed = flag * sqrt((power*1000 - flag * (1/2 * air_density * drag_area * speed**2) / mass) * 2 / mass)
-		debug += " Hz: " + String.num((2/mass) * (kinetic_energy + power * delta - resistance * delta))
-		speed = sqrt((2.0/mass) * (kinetic_energy + power * delta - resistance * speed * delta))
+		debug += " Hz: " + String.num((2/mass) * (kinetic_energy + power * delta - resistance * delta)- (mass*10*0.3*speed*delta))
+		speed = sqrt((2.0/mass) * (kinetic_energy + power * delta - (resistance * speed * delta)-(mass*10*0.3*speed*delta)))
 		
 		if input < 0:
 			speed -= braking * delta
@@ -93,6 +93,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):
 		turn = -1
 	rotation_change(turn, delta)
-	data.emit(speed)
+	data.emit(speed*3.6)
 	
 	print(debug)

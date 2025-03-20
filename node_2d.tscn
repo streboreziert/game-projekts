@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4aq2c1uvx0ni"]
 
-[ext_resource type="Texture2D" uid="uid://bii24optsln07" path="res://icon.svg" id="1_msqvv"]
-[ext_resource type="Texture2D" uid="uid://jwwa4jumma0u" path="res://top-car-view-png-34876.png" id="2_w8fwn"]
+[ext_resource type="Texture2D" uid="uid://nd14rfi30dwu" path="res://icon.svg" id="1_msqvv"]
+[ext_resource type="Texture2D" uid="uid://ccrt81lwnwsm5" path="res://top-car-view-png-34876.png" id="2_w8fwn"]
 
 [node name="Node2D" type="Node2D"]
 
