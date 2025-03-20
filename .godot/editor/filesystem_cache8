@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1740653280
 car.gd::GDScript::-1::1740652347::0::1::::<>Sprite2D<>::
 car.gltf::PackedScene::2701668049123835688::1740652347::1740652361::1::::<><>::
@@ -10,3 +11,10 @@ image.png::CompressedTexture2D::7820827828145332683::1740653240::1740653280::1::
 node_2d.tscn::PackedScene::4422916983665055790::1740652224::0::1::::<><>::uid://bii24optsln07::::res://icon.svg<>uid://jwwa4jumma0u::::res://top-car-view-png-34876.png
 README.md::TextFile::-1::1740651951::0::1::::<><>::
 top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1740652224::1740652361::1::::<><>::
+=======
+::res://::1740652235
+icon.svg::CompressedTexture2D::2966138361044518462::1740642347::1740652235::1::::<><>::
+node_2d.tscn::PackedScene::4422916983665055790::1740652224::0::1::::<><>::uid://bii24optsln07::::res://icon.svg<>uid://jwwa4jumma0u::::res://top-car-view-png-34876.png
+README.md::TextFile::-1::1740651951::0::1::::<><>::
+top-car-view-png-34876.png::CompressedTexture2D::678453215178079686::1740652224::1740652235::1::::<><>::
+>>>>>>> Stashed changes
