@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ognrxcr68hma"
-path="res://.godot/imported/ROAD_ELEMENTS.png-b6ea374dced16de384a9d057ba7b3563.ctex"
+uid="uid://bq2qb5sh46qv"
+path="res://.godot/imported/90.png-e27e4ea5e47e7d71756c9919cf54cbe9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ROAD_ELEMENTS.png"
-dest_files=["res://.godot/imported/ROAD_ELEMENTS.png-b6ea374dced16de384a9d057ba7b3563.ctex"]
+source_file="res://90.png"
+dest_files=["res://.godot/imported/90.png-e27e4ea5e47e7d71756c9919cf54cbe9.ctex"]
 
 [params]
 
