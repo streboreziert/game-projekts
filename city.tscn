@@ -12,7 +12,7 @@ scale = Vector2(1.76, 1.76)
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(1469.17, 9363)
-scale = Vector2(-0.000115701, 2.44523e-08)
+scale = Vector2(-0.000115701, 1e-05)
 points = PackedVector2Array(-6135, 3803, -4687, 2978, -7164, 7016, 1459, 9251, 1370, 9353, -179, 4832)
 script = ExtResource("2_aph5w")
 

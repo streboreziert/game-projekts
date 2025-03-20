@@ -38,7 +38,7 @@ func speed_change(delta, input):
 	var speed_old = speed
 	var air_density = 1.2
 	var drag_area = 1.5
-	var rolling_coef = 0.015
+	var rolling_coef = 0.2
 	var drag = (0.5 * drag_area * air_density * speed ** 2)
 	var rolling_resistance = rolling_coef * mass * 10
 	
