@@ -1,4 +1,5 @@
+res://CityMap.tscn
 res://car.tscn
-res://car.gd
-res://city.tscn
 res://node_2d.tscn
+res://city.tscn
+res://trase.tscn

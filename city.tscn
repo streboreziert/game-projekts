@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmur12arxib1d"]
+[gd_scene load_steps=4 format=3 uid="uid://dmur12arxib1d"]
 
 [ext_resource type="PackedScene" uid="uid://fjjmtmanx7pl" path="res://car.tscn" id="1_sdmxv"]
+[ext_resource type="Script" path="res://line_2d.gd" id="2_aph5w"]
 [ext_resource type="PackedScene" uid="uid://b4aq2c1uvx0ni" path="res://node_2d.tscn" id="3_7gk7m"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-419, 2984)
+scale = Vector2(1.76, 1.76)
 
 [node name="Car" parent="." instance=ExtResource("1_sdmxv")]
 
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(1469.17, 9363)
+scale = Vector2(-0.000115701, 2.44523e-08)
+points = PackedVector2Array(-6135, 3803, -4687, 2978, -7164, 7016, 1459, 9251, 1370, 9353, -179, 4832)
+script = ExtResource("2_aph5w")
+
 [node name="Node2D" parent="." instance=ExtResource("3_7gk7m")]
-position = Vector2(-337, 1659)
+position = Vector2(-4726.14, 1995.45)
+scale = Vector2(1.76, 1.76)
