@@ -1,7 +1,7 @@
 extends Sprite2D
 var m_to_px = 100 # 1m = 100 px
 
-var turn_radius = 15
+var turn_radius = 10
 #var turn_time = 0.5
 #var turning = 0
 
@@ -71,7 +71,7 @@ func speed_change(delta, input):
 		speed = speed_old + 10 * delta
 	
 func rotation_change(turn, delta):
-	var ang_rot = speed*m_to_px / (turn_radius * 2 * PI)
+	var ang_rot = speed*m_to_px / (turn_radius * m_to_px * 2 * PI)
 	#if turning < 1:
 		#turning += delta / turn_time
 	rotation += 2 * PI * ang_rot * delta * turn
@@ -117,8 +117,8 @@ func _process(delta: float) -> void:
 		turn = 1
 	if Input.is_action_pressed("ui_left") and !changing_lanes:
 		turn = -1
-	#rotation_change(turn, delta)
-	lane_change(turn,position,rotation, delta)
+	rotation_change(turn, delta)
+	#lane_change(turn,position,rotation, delta)
 	data.emit(speed*3.6)
 	
 	print(debug)

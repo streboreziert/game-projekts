@@ -1,3 +1,4 @@
-res://city.tscn
 res://car.tscn
+res://car.gd
+res://city.tscn
 res://node_2d.tscn
