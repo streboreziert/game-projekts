@@ -1,17 +1,16 @@
 extends Sprite2D
+var m_to_px = 100 # 1m = 100 px
 
-var size = 100
-var turn_radius = 4
-var turn_time = 0.5
-var turning = 0
+var turn_radius = 15
+#var turn_time = 0.5
+#var turning = 0
 
 var mass = 1500.0
-#var mass1 = 0.281333
 
 var speed = 0
-var engine_power = 100
+var engine_power = 300
 var tire_grip = 0.4
-var braking = 10
+var braking_deceleration = 10
 
 var reverse_gear = 15
 
@@ -21,61 +20,87 @@ var acceleration_time = 2
 signal data(speed)
 var debug = ""
 
-func speed_change(delta, input):
-	var air_density = 0.0012
-	var drag_area = 2
-	var resistance = 0.0
+#func _init() -> void:
+	#var x_size = 227
+	#var y_size = 500
 	
-	#var D_speed = 0
-	#if acceleration < 1:
-		#acceleration += delta / acceleration_time
+func new_speed(rolling, drag, braking, power, delta):
+	var kinetic_energy = (mass * abs(speed) ** 2)/2.0
+	
+	
+	
+	if (kinetic_energy + (power - drag * abs(speed) - rolling*abs(speed)) * delta) - braking * delta < 0:
+		return 0
+	else:
+		return (sqrt( (2.0/mass) * (kinetic_energy + (power - drag * abs(speed) - rolling*abs(speed)) * delta)) - braking * delta)
+
+func speed_change(delta, input):
+	var speed_old = speed
+	var air_density = 1.2
+	var drag_area = 1.5
+	var rolling_coef = 0.015
+	var drag = (0.5 * drag_area * air_density * speed ** 2)
+	var rolling_resistance = rolling_coef * mass * 10
 	
 	var power = 0
-	if speed >= 0:
-		debug += "speed: " + String.num(speed)
+	
+	var braking_force = 0
+	
+	if speed * input > 0:
+		power = engine_power * 1000
 		
-		resistance = ((1.0/2.0) * drag_area * air_density * speed ** 2)
-		var kinetic_energy = (mass * speed ** 2)/2.0
+	if speed * input < 0:
+		braking_force = braking_deceleration
+	
+	if speed == 0 and input != 0:
+		power = engine_power
+		speed = input * new_speed(rolling_resistance,drag,braking_force,power,delta)
 		
-		debug += " Resistance: " + String.num(resistance)
-		debug += " Energy: " + String.num(kinetic_energy)
-		if input > 0:
-			power = engine_power * 1000
-			#flag = 1
-		
-		#D_speed = flag * sqrt((power*1000 - flag * (1/2 * air_density * drag_area * speed**2) / mass) * 2 / mass)
-		debug += " Hz: " + String.num((2/mass) * (kinetic_energy + power * delta - resistance * delta)- (mass*10*0.3*speed*delta))
-		speed = sqrt((2.0/mass) * (kinetic_energy + power * delta - (resistance * speed * delta)-(mass*10*0.3*speed*delta)))
-		
-		if input < 0:
-			speed -= braking * delta
-		#speed += D_speed * delta
-	if speed < 0:
-		if input > 0:
-			speed += braking * delta
-		if input < 0 and -speed < reverse_gear:
-			speed += engine_power * delta * input * acceleration
-			
-	#if input == 0:
-		#if speed != 0:
-			#if speed > 0:
-				#speed -= resistance * delta
-				#if speed <0:
-					#speed = 0
-			#elif speed < 0:
-				#speed += resistance * delta
-				#if speed > 0:
-					#speed = 0
+		if (speed-speed_old)/delta > 10:
+			speed = speed_old + 10 * delta
+	else:
+		var dir = 0
+		if speed > 0:
+			dir = 1
+		if speed < 0:
+			dir = -1
+	
+		speed = dir * new_speed(rolling_resistance,drag,braking_force,power,delta)
+	
+	if (speed-speed_old)/delta > 10:
+		speed = speed_old + 10 * delta
 	
 func rotation_change(turn, delta):
-	var ang_rot = speed / (turn_radius * 2 * PI)
-	if turning < 1:
-		turning += delta / turn_time
-	rotation += 2 * PI * ang_rot * delta * turn * turning
+	var ang_rot = speed*m_to_px / (turn_radius * 2 * PI)
+	#if turning < 1:
+		#turning += delta / turn_time
+	rotation += 2 * PI * ang_rot * delta * turn
 
+var line = 0
+var prev_dir = 1
+func lane_change(dir, pos, rot, delta):
+	#signal lanes(dir, pos, )
+	if dir != 0:
+		prev_dir = dir
+	var lane_width = 10
+	if dir != 0 or changing_lanes:
+		changing_lanes = true
+		position = pos + Vector2.UP.rotated(rot + PI/2 * prev_dir) * speed / lane_width * m_to_px * delta
+		line += speed/lane_width * delta
+		debug = String.num(line)
+		
+		if line >= lane_width:
+			changing_lanes = false
+			line = 0
+			prev_dir = 0
+	
+		
+
+
+var changing_lanes = false
 func _process(delta: float) -> void:
-	debug = ""
-	var direction = Vector2.UP.rotated(rotation) * speed
+	#debug = ""
+	var direction = Vector2.UP.rotated(rotation) * speed * m_to_px * delta
 	
 	position += direction
 	
@@ -88,11 +113,12 @@ func _process(delta: float) -> void:
 	
 	
 	var turn = 0
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") and !changing_lanes:
 		turn = 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") and !changing_lanes:
 		turn = -1
-	rotation_change(turn, delta)
+	#rotation_change(turn, delta)
+	lane_change(turn,position,rotation, delta)
 	data.emit(speed*3.6)
 	
 	print(debug)
