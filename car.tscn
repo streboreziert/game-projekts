@@ -1,15 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://fjjmtmanx7pl"]
+[gd_scene load_steps=4 format=3 uid="uid://fjjmtmanx7pl"]
 
 [ext_resource type="Texture2D" uid="uid://ccrt81lwnwsm5" path="res://top-car-view-png-34876.png" id="1_foc8d"]
 [ext_resource type="Script" path="res://car.gd" id="2_vc372"]
 [ext_resource type="Script" path="res://data.gd" id="3_vfyoy"]
-[ext_resource type="Texture2D" uid="uid://nd14rfi30dwu" path="res://icon.svg" id="4_wpdfh"]
 
-[node name="Node" type="Node"]
+[node name="Car" type="Node"]
 
 [node name="Car" type="Sprite2D" parent="."]
-position = Vector2(222.063, -99.0625)
-scale = Vector2(0.413546, 0.36775)
+position = Vector2(295, -84)
 texture = ExtResource("1_foc8d")
 script = ExtResource("2_vc372")
 
@@ -17,20 +15,16 @@ script = ExtResource("2_vc372")
 position = Vector2(10, -2.15983)
 scale = Vector2(2, 2.15983)
 ignore_rotation = false
+zoom = Vector2(0.1, 0.1)
 
 [node name="data" type="Label" parent="Car/Camera2D"]
-offset_left = 78.0
-offset_top = -151.0
-offset_right = 448.0
-offset_bottom = 45.0
+offset_left = -2522.0
+offset_top = 1143.22
+offset_right = -2030.0
+offset_bottom = 1391.22
+scale = Vector2(10, 10)
 text = "test"
 horizontal_alignment = 1
 script = ExtResource("3_vfyoy")
-
-[node name="Icon" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(105.875, -441.168)
-scale = Vector2(34.6426, 26.6693)
-texture = ExtResource("4_wpdfh")
 
 [connection signal="data" from="Car" to="Car/Camera2D/data" method="_on_car_data"]

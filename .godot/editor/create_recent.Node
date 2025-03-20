@@ -1,3 +1,6 @@
-Camera2D
 Label
+Line2D
+Camera2D
+TileMapLayer
+MeshInstance2D
 Node

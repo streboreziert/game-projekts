@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmur12arxib1d"]
+
+[ext_resource type="PackedScene" uid="uid://fjjmtmanx7pl" path="res://car.tscn" id="1_sdmxv"]
+[ext_resource type="Script" path="res://line_2d.gd" id="2_aph5w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Car" parent="." instance=ExtResource("1_sdmxv")]
+
+[node name="Line2D" type="Line2D" parent="."]
+script = ExtResource("2_aph5w")
