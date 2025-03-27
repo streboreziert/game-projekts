@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://fjjmtmanx7pl"]
+
+[ext_resource type="Texture2D" uid="uid://ccrt81lwnwsm5" path="res://top-car-view-png-34876.png" id="1_foc8d"]
+[ext_resource type="Script" path="res://car.gd" id="2_vc372"]
+[ext_resource type="Script" path="res://data.gd" id="3_vfyoy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1befg"]
+size = Vector2(152, 367)
+
+[node name="Car" type="CharacterBody2D"]
+script = ExtResource("2_vc372")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(12, -4)
+scale = Vector2(0.768722, 0.768722)
+texture = ExtResource("1_foc8d")
+
+[node name="Camera2D" type="Camera2D" parent="Car"]
+position = Vector2(10, -2.15983)
+scale = Vector2(2, 2.15983)
+ignore_rotation = false
+zoom = Vector2(0.1, 0.1)
+
+[node name="data" type="Label" parent="Car/Camera2D"]
+offset_left = -2522.0
+offset_top = 1143.22
+offset_right = -2030.0
+offset_bottom = 1391.22
+scale = Vector2(10, 10)
+text = "test"
+horizontal_alignment = 1
+script = ExtResource("3_vfyoy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, -3.5)
+shape = SubResource("RectangleShape2D_1befg")

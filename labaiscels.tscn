@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://1c1xo4lewhuj"]
+
+[ext_resource type="Texture2D" uid="uid://dco11f6xedp6l" path="res://ceļš.png" id="1_g5vdw"]
+
+[node name="Ceļš" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-213, 402.5)
+polygon = PackedVector2Array(-1410, -562, 1836, -559, 1836, -561, -1410, -563.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(-213, 402.5)
+polygon = PackedVector2Array(-1410, -243, 1836.5, -245.5, 1836.5, -238.5, -1410, -242)
+
+[node name="Ceļš" type="Sprite2D" parent="."]
+texture = ExtResource("1_g5vdw")

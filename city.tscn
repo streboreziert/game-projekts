@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmur12arxib1d"]
+
+[ext_resource type="PackedScene" uid="uid://fjjmtmanx7pl" path="res://car.tscn" id="1_sdmxv"]
+[ext_resource type="PackedScene" uid="uid://y12edmo3wuqi" path="res://map.tscn" id="2_saddu"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-419, 2984)
+scale = Vector2(1.76, 1.76)
+
+[node name="map" parent="." instance=ExtResource("2_saddu")]
+z_index = -10
+position = Vector2(-123.295, -3135.8)
+
+[node name="Car" parent="." instance=ExtResource("1_sdmxv")]
+position = Vector2(23.8636, -1023.86)

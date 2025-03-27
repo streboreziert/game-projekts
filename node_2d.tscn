@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4aq2c1uvx0ni"]
+
+[ext_resource type="Texture2D" uid="uid://ognrxcr68hma" path="res://ROAD_ELEMENTS.png" id="1_nsmvr"]
+[ext_resource type="Texture2D" uid="uid://dco11f6xedp6l" path="res://ceļš.png" id="2_8ohic"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-2331, -1821)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RoadElements" type="Sprite2D" parent="."]
+position = Vector2(-1630, -1686)
+rotation = 3.14159
+texture = ExtResource("1_nsmvr")
+
+[node name="RoadElements" type="Sprite2D" parent="RoadElements"]
+position = Vector2(-4174, 0.000366569)
+rotation = 4.71239
+texture = ExtResource("1_nsmvr")
+metadata/_edit_group_ = true
+
+[node name="RoadElements2" type="Sprite2D" parent="RoadElements"]
+position = Vector2(-4174.5, 929.5)
+rotation = 3.14159
+texture = ExtResource("1_nsmvr")
+
+[node name="RoadElements" type="Sprite2D" parent="RoadElements/RoadElements2"]
+position = Vector2(-4174, 0.000366569)
+rotation = 4.71239
+texture = ExtResource("1_nsmvr")
+metadata/_edit_group_ = true
+
+[node name="Ceļš" type="Sprite2D" parent="RoadElements"]
+position = Vector2(-2086.5, 1228.5)
+texture = ExtResource("2_8ohic")
+metadata/_edit_group_ = true
+
+[node name="Ceļš" type="Sprite2D" parent="."]
+position = Vector2(458, -1387)
+texture = ExtResource("2_8ohic")
+metadata/_edit_group_ = true
