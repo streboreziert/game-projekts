@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742816193
+::res://::1743056564
 90.png::CompressedTexture2D::104886918906012489::1742458006::1742811819::1::::<><>::
-car.gd::GDScript::-1::1742814852::0::1::::<>Sprite2D<>::
-car.tscn::PackedScene::370092516938076433::1742814852::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
+car.gd::GDScript::-1::1743056517::0::1::::<>CharacterBody2D<>::
+car.tscn::PackedScene::370092516938076433::1743056517::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
 ceļš.png::CompressedTexture2D::7330166410921844189::1742456533::1742811818::1::::<><>::
-city.tscn::PackedScene::8043895768269352779::1742814852::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>res://line_2d.gd<>uid://b4aq2c1uvx0ni::::res://node_2d.tscn
+city.tscn::PackedScene::8043895768269352779::1743056517::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>res://line_2d.gd<>uid://b4aq2c1uvx0ni::::res://node_2d.tscn
 CityMap.tscn::PackedScene::3903277245483234242::1742458166::0::1::::<><>::uid://c07asp5yj7u3y::::res://image.png
 data.gd::GDScript::-1::1742456296::0::1::::<>Label<>::
 icon.svg::CompressedTexture2D::920279431414632532::1740642347::1742811818::1::::<><>::
