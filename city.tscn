@@ -19,7 +19,7 @@ points = PackedVector2Array(-6135, 3803, -4687, 2978, -7164, 7016, 1459, 9251, 1
 script = ExtResource("2_aph5w")
 
 [node name="Node2D" parent="." instance=ExtResource("3_7gk7m")]
-position = Vector2(-4726.14, 1995.45)
+position = Vector2(-4719.89, 1976.7)
 scale = Vector2(1.76, 1.76)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
