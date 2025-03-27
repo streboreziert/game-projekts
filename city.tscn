@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmur12arxib1d"]
 
 [ext_resource type="PackedScene" uid="uid://fjjmtmanx7pl" path="res://car.tscn" id="1_sdmxv"]
+[ext_resource type="PackedScene" uid="uid://xy8jc52be6ci" path="res://90pag.tscn" id="2_0posq"]
 [ext_resource type="Script" path="res://line_2d.gd" id="2_aph5w"]
-[ext_resource type="PackedScene" uid="uid://b4aq2c1uvx0ni" path="res://node_2d.tscn" id="3_7gk7m"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-419, 2984)
@@ -11,21 +11,11 @@ scale = Vector2(1.76, 1.76)
 [node name="Car" parent="." instance=ExtResource("1_sdmxv")]
 position = Vector2(56.8182, -1518.75)
 
+[node name="Node2D" parent="." instance=ExtResource("2_0posq")]
+position = Vector2(4036.93, -4410.23)
+
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(1469.17, 9363)
 scale = Vector2(-0.000115701, 1e-05)
 points = PackedVector2Array(-6135, 3803, -4687, 2978, -7164, 7016, 1459, 9251, 1370, 9353, -179, 4832)
 script = ExtResource("2_aph5w")
-
-[node name="Node2D" parent="." instance=ExtResource("3_7gk7m")]
-position = Vector2(-4726.14, 1995.45)
-scale = Vector2(1.76, 1.76)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(0, -0.000488281)
-polygon = PackedVector2Array(-299.432, -180.114, -81.25, -225.568, 127.841, -334.659, 255.114, -425.568, 355.114, -552.841, 436.932, -661.932, 500.568, -771.023, 536.932, -980.114, 564.205, -2525.57, 491.477, -2789.2, 364.205, -3025.57, 191.477, -3216.48, -8.52274, -3334.66, -263.068, -3416.48, -7481.25, -3416.48, -7653.98, -3371.02, -7844.89, -3325.57, -7990.34, -3243.75, -8135.79, -3134.66, -8263.07, -2961.93, -8353.98, -2771.02, -8390.34, -2552.84, -8399.43, -1098.3, -8372.16, -952.841, -8335.79, -816.477, -8281.25, -661.932, -8208.52, -561.932, -8144.89, -461.932, -8063.07, -380.114, -7935.8, -298.296, -7835.8, -261.932, -7672.16, -198.296, -7490.34, -171.023, -7253.98, -171.023, -393.182, -166.477, -310.795, -177.841, -303.977, -171.591, -303.977, -142.614, -8471.59, -132.955, -8722.16, -2569.89, -8076.7, -3744.89, 620.455, -3754.55, 765.341, -55.6819)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(2.27272, -1514.2, -12.5, -1047.16, -41.4773, -984.659, -75, -912.5, -113.636, -859.659, -171.023, -811.364, -228.977, -782.386, -310.795, -772.727, -397.727, -758.523, -527.841, -743.75, -7467.61, -733.523, -7650.57, -790.341, -7788.07, -962.5, -7834.09, -1111.36, -7822.73, -2600.57, -7719.32, -2760.8, -7501.7, -2840.91, -365.909, -2852.27, -217.045, -2806.25, -114.205, -2714.77, -22.7273, -2600.57, -10.7955, -2359.66, 1.13637, -1545.45, -22.7273, -1543.75, -168.75, -2621.02, -1325.57, -2729.55, -7546.02, -2710.8, -7482.39, -1210.8, -1246.02, -1165.34, -209.659, -1383.52, 2.27272, -1533.52)
