@@ -1,6 +1,4 @@
-res://90pag.tscn
-res://labaiscels.tscn
-res://krustojums.tscn
-res://map.tscn
-res://city.tscn
 res://car.tscn
+res://CityMap.tscn
+res://map.tscn
+res://node_2d.tscn
