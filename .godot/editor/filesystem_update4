@@ -1,5 +1,9 @@
+res://city.tscn
 res://car.tscn
+<<<<<<< HEAD
 res://trase.tscn
 res://city.tscn
 res://node_2d.tscn
+=======
+>>>>>>> 3a88cf902af517a14132fd73aa86a16b1a85ca55
 res://car.gd
