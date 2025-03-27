@@ -11,9 +11,10 @@ size = Vector2(152, 367)
 script = ExtResource("2_vc372")
 
 [node name="Car" type="Sprite2D" parent="."]
-position = Vector2(12, -4)
 scale = Vector2(0.768722, 0.768722)
 texture = ExtResource("1_foc8d")
+centered = false
+offset = Vector2(-113.5, -450)
 
 [node name="Camera2D" type="Camera2D" parent="Car"]
 position = Vector2(10, -2.15983)
@@ -32,5 +33,5 @@ horizontal_alignment = 1
 script = ExtResource("3_vfyoy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9, -3.5)
+position = Vector2(-2, -150)
 shape = SubResource("RectangleShape2D_1befg")

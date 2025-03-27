@@ -77,6 +77,7 @@ func new_speed(rolling, drag, braking, power, delta):
 		return 0
 	return sqrt((2.0 / 1500) * new_energy) - braking * delta
 
+var steer_input = 0.0
 func _physics_process(delta):
 	var direction = 0
 
@@ -104,14 +105,20 @@ func _physics_process(delta):
 				break
 
 	# ✅ Realistic steering
-	var steer_input = 0.0
+	var steer_time = 0.5
 	if Input.is_action_pressed("ui_left"):
-		steer_input = -1.0
+		steer_input -= delta/steer_time
+		if steer_input < -1:
+			steer_input = -1
 	elif Input.is_action_pressed("ui_right"):
-		steer_input = 1.0
+		steer_input += delta/steer_time
+		if steer_input > 1:
+			steer_input = 1
+	elif !Input.is_action_pressed("ui_left") and !Input.is_action_pressed("ui_right") and steer_input != 0:
+		steer_input = 0
 
-	var min_steer_radius = 1.5
-	var max_steer_radius = 10.0
+	var min_steer_radius = 12.0
+	var max_steer_radius = 20.0
 	var abs_speed = abs(speed)
 
 	if speed != 0 and steer_input != 0:
