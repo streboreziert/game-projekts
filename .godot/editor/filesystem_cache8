@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743071385
+::res://::1743072494
 90.png::CompressedTexture2D::104886918906012489::1742458006::1743071386::1::::<><>::
 90pag.tscn::PackedScene::1665908355297735512::1743069641::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png
 car.gd::GDScript::-1::1743065765::0::1::::<>CharacterBody2D<>::
-car.tscn::PackedScene::370092516938076433::1743069694::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
+car.tscn::PackedScene::370092516938076433::1743071448::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
 ceļš.png::CompressedTexture2D::7330166410921844189::1742456533::1743071385::1::::<><>::
 city.tscn::PackedScene::8043895768269352779::1743069641::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>uid://xy8jc52be6ci::::res://90pag.tscn<>res://line_2d.gd
 CityMap.tscn::PackedScene::3903277245483234242::1742458166::0::1::::<><>::uid://c07asp5yj7u3y::::res://image.png
