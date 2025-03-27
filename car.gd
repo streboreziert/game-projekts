@@ -89,19 +89,29 @@ func _physics_process(delta):
 
 	speed_change(delta, direction)
 
-	# Apply velocity
+	# Apply velocity and move
 	velocity = Vector2.UP.rotated(rotation) * speed * m_to_px
 	move_and_slide()
 
-	# ✅ Realistic Turning
+	# ✅ Fixed for Godot 4: stop on collision using get_slide_collision_count()
+	var collision_count = get_slide_collision_count()
+	if collision_count > 0:
+		for i in range(collision_count):
+			var collision = get_slide_collision(i)
+			if collision:
+				print("💥 Collision with:", collision.get_collider())
+				speed = 0
+				break
+
+	# ✅ Realistic steering
 	var steer_input = 0.0
 	if Input.is_action_pressed("ui_left"):
 		steer_input = -1.0
 	elif Input.is_action_pressed("ui_right"):
 		steer_input = 1.0
 
-	var min_steer_radius = 7.0
-	var max_steer_radius = 20.0
+	var min_steer_radius = 1.5
+	var max_steer_radius = 10.0
 	var abs_speed = abs(speed)
 
 	if speed != 0 and steer_input != 0:
@@ -110,10 +120,10 @@ func _physics_process(delta):
 		rotation += turn_amount
 		print("↪️ Steering: speed =", speed, "turn =", turn_amount)
 
-	data.emit(speed * 3.6)  # emit km/h
+	data.emit(speed * 3.6)
 	print("📦 _physics_process: speed =", speed, "direction =", direction)
 
-	# --- Brake lights ---
+	# 🔴 Brake lights
 	if has_node("BrakeLights"):
 		$BrakeLights.visible = false
 		if direction == 0 and speed != 0:
@@ -123,7 +133,7 @@ func _physics_process(delta):
 			$BrakeLights.visible = true
 			print("💡 Brake lights ON (reversing direction)")
 
-	# --- UI Direction Indicator ---
+	# 🧭 UI direction indicator
 	if has_node("UI/DirectionLabel"):
 		var direction_text = "Idle"
 		if speed > 0:
