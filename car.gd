@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 var m_to_px = 100
 var speed = 0.0
-var engine_power = 300        # Forward power
-var reverse_power = 150       # Reverse power (lower)
+var engine_power = 300
+var reverse_power = 150
 var braking_deceleration = 40
-var max_reverse_speed = 20.0  # Cap reverse speed
+var max_reverse_speed = 20.0
 
 var tire_grip = 0.2
 var acceleration = 0
@@ -43,7 +43,6 @@ func speed_change(delta, input):
 	elif input < 0:
 		power = reverse_power * 1000
 
-	# Case: switching direction — apply braking
 	if speed != 0 and input != 0 and input_dir != speed_dir:
 		print("🔃 Switching direction. Braking...")
 		var decel = braking_deceleration * speed_dir
@@ -52,7 +51,6 @@ func speed_change(delta, input):
 			speed = 0
 		return
 
-	# Case: no input — natural deceleration
 	if input == 0 and speed != 0:
 		print("🛑 No input. Decelerating...")
 		var decel = braking_deceleration * speed_dir
@@ -61,7 +59,6 @@ func speed_change(delta, input):
 			speed = 0
 		return
 
-	# Case: accelerating in current direction
 	if input != 0:
 		var s = new_speed(rolling_resistance, drag, 0, power, delta)
 		if input > 0:
@@ -92,13 +89,26 @@ func _physics_process(delta):
 
 	speed_change(delta, direction)
 
+	# Apply velocity
 	velocity = Vector2.UP.rotated(rotation) * speed * m_to_px
 	move_and_slide()
 
-	if Input.is_action_pressed("ui_right"):
-		rotation += 0.05
+	# ✅ Realistic Turning
+	var steer_input = 0.0
 	if Input.is_action_pressed("ui_left"):
-		rotation -= 0.05
+		steer_input = -1.0
+	elif Input.is_action_pressed("ui_right"):
+		steer_input = 1.0
+
+	var min_steer_radius = 7.0
+	var max_steer_radius = 20.0
+	var abs_speed = abs(speed)
+
+	if speed != 0 and steer_input != 0:
+		var steer_radius = lerp(min_steer_radius, max_steer_radius, clamp(abs_speed / 100.0, 0, 1))
+		var turn_amount = (speed / steer_radius) * steer_input * delta
+		rotation += turn_amount
+		print("↪️ Steering: speed =", speed, "turn =", turn_amount)
 
 	data.emit(speed * 3.6)  # emit km/h
 	print("📦 _physics_process: speed =", speed, "direction =", direction)
