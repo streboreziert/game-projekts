@@ -10,6 +10,7 @@ scale = Vector2(1.76, 1.76)
 
 [node name="Car" parent="." instance=ExtResource("1_sdmxv")]
 position = Vector2(56.8182, -1518.75)
+scale = Vector2(0.8, 0.8)
 
 [node name="Node2D" parent="." instance=ExtResource("2_0posq")]
 position = Vector2(4036.93, -4410.23)
