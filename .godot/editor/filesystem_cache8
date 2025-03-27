@@ -1,17 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743068483
-90.png::CompressedTexture2D::104886918906012489::1741260482::1742458220::1::::<><>::
-car.gd::GDScript::-1::1743060484::0::1::::<>CharacterBody2D<>::
-car.tscn::PackedScene::370092516938076433::1743060754::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
+::res://::1743071617
+90.png::CompressedTexture2D::104886918906012489::1743071617::1743071617::1::::<><>::
+90pag.tscn::PackedScene::1665908355297735512::1743070066::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png
+car.gd::GDScript::-1::1743069645::0::1::::<>CharacterBody2D<>::
+car.tscn::PackedScene::370092516938076433::1743070066::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
 ceļš.png::CompressedTexture2D::7330166410921844189::1741259636::1742458220::1::::<><>::
-city.tscn::PackedScene::8043895768269352779::1743060754::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>res://line_2d.gd<>uid://b4aq2c1uvx0ni::::res://node_2d.tscn
+city.tscn::PackedScene::8043895768269352779::1743070066::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>uid://xy8jc52be6ci::::res://90pag.tscn<>res://line_2d.gd<>uid://1c1xo4lewhuj::::res://labaiscels.tscn
 CityMap.tscn::PackedScene::3903277245483234242::1742457934::0::1::::<><>::uid://c07asp5yj7u3y::::res://image.png
 data.gd::GDScript::-1::1742456473::0::1::::<>Label<>::
 icon.svg::CompressedTexture2D::920279431414632532::1740652841::1742458220::1::::<><>::
+krustojums.tscn::PackedScene::7775327863027580238::1743070998::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png
+labaiscels.tscn::PackedScene::1830659185800940765::1743070066::0::1::::<><>::uid://dco11f6xedp6l::::res://ceļš.png
 line_2d.gd::GDScript::-1::1742456473::0::1::::<>Node2D<>::
 node_2d.tscn::PackedScene::4422916983665055790::1742811281::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
 README.md::TextFile::-1::1740652841::0::1::::<><>::
-ROAD_ELEMENTS.png::CompressedTexture2D::995850968800955596::1741261172::1742458220::1::::<><>::
+ROAD_ELEMENTS.png::CompressedTexture2D::995850968800955596::1743070469::1743070469::1::::<><>::
 Screenshot 2025-03-24 at 13.17.10.png::CompressedTexture2D::8854255459391658580::1743060484::1743060628::1::::<><>::
 Screenshot 2025-03-24 at 13.36.32.png::CompressedTexture2D::5307604767882724768::1743060484::1743060628::1::::<><>::
 top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1740652841::1742458220::1::::<><>::

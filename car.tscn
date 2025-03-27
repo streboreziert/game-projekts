@@ -14,14 +14,12 @@ script = ExtResource("2_vc372")
 position = Vector2(12, -4)
 scale = Vector2(0.768722, 0.768722)
 texture = ExtResource("1_foc8d")
-centered = false
-offset = Vector2(-113.5, -420)
 
 [node name="Camera2D" type="Camera2D" parent="Car"]
 position = Vector2(10, -2.15983)
 scale = Vector2(2, 2.15983)
 ignore_rotation = false
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.1, 0.1)
 
 [node name="data" type="Label" parent="Car/Camera2D"]
 offset_left = -2522.0
@@ -34,5 +32,5 @@ horizontal_alignment = 1
 script = ExtResource("3_vfyoy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, -138)
+position = Vector2(9, -3.5)
 shape = SubResource("RectangleShape2D_1befg")

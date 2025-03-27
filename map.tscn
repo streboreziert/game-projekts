@@ -1,42 +1,67 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdsiasyqm82wo"]
+[gd_scene load_steps=4 format=3 uid="uid://y12edmo3wuqi"]
 
-[ext_resource type="Texture2D" uid="uid://ognrxcr68hma" path="res://ROAD_ELEMENTS.png" id="1_j4thl"]
-[ext_resource type="Texture2D" uid="uid://dco11f6xedp6l" path="res://ceļš.png" id="2_qdax7"]
+[ext_resource type="PackedScene" uid="uid://di1orqc5m1p3k" path="res://krustojums.tscn" id="1_3lfl3"]
+[ext_resource type="PackedScene" uid="uid://1c1xo4lewhuj" path="res://labaiscels.tscn" id="2_yotca"]
+[ext_resource type="PackedScene" uid="uid://xy8jc52be6ci" path="res://90pag.tscn" id="3_32ajh"]
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(-4726.14, 1995.45)
-scale = Vector2(1.76, 1.76)
+[node name="map" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="krustojums" parent="." instance=ExtResource("1_3lfl3")]
+scale = Vector2(1, 1)
 
-[node name="RoadElements" type="Sprite2D" parent="."]
-position = Vector2(-8018.51, -1617.85)
-rotation = 3.14159
-texture = ExtResource("1_j4thl")
+[node name="Ceļš" parent="." instance=ExtResource("2_yotca")]
+position = Vector2(6, -4115)
+rotation = 1.5708
 
-[node name="RoadElements" type="Sprite2D" parent="RoadElements"]
-position = Vector2(-4174, 0.000366569)
+[node name="Ceļš3" parent="." instance=ExtResource("2_yotca")]
+position = Vector2(3065, 4150)
+rotation = 1.5708
+
+[node name="Ceļš2" parent="." instance=ExtResource("2_yotca")]
+position = Vector2(5, 4181)
+rotation = 1.5708
+
+[node name="Ceļš4" parent="." instance=ExtResource("2_yotca")]
+position = Vector2(-2441, -4714)
+rotation = 1.5708
+
+[node name="Ceļš5" parent="." instance=ExtResource("2_yotca")]
+position = Vector2(8, -4694)
+rotation = 1.5708
+
+[node name="90pag" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(603, 8335)
 rotation = 4.71239
-texture = ExtResource("1_j4thl")
-metadata/_edit_group_ = true
 
-[node name="RoadElements2" type="Sprite2D" parent="RoadElements"]
-position = Vector2(-4174.5, 929.5)
+[node name="90pag2" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(2463, 8335)
 rotation = 3.14159
-texture = ExtResource("1_j4thl")
 
-[node name="RoadElements" type="Sprite2D" parent="RoadElements/RoadElements2"]
-position = Vector2(-4174, 0.000366569)
+[node name="90pag3" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(1850, -559)
+rotation = 3.14159
+
+[node name="90pag4" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(-1843, -556)
 rotation = 4.71239
-texture = ExtResource("1_j4thl")
-metadata/_edit_group_ = true
 
-[node name="Ceļš" type="Sprite2D" parent="RoadElements"]
-position = Vector2(-2086.5, 1228.5)
-texture = ExtResource("2_qdax7")
-metadata/_edit_group_ = true
+[node name="90pag5" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(-1842, -8866)
 
-[node name="Ceļš" type="Sprite2D" parent="."]
-position = Vector2(-5930.51, -1318.85)
-texture = ExtResource("2_qdax7")
-metadata/_edit_group_ = true
+[node name="90pag6" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(-589, -8862)
+rotation = 1.5708
+
+[node name="90pag7" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(3047, -2388)
+
+[node name="90pag8" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(3662, -2)
+
+[node name="90pag9" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(4878, -1197)
+rotation = 3.14159
+
+[node name="90pag10" parent="." instance=ExtResource("3_32ajh")]
+position = Vector2(4882, -2390)
+rotation = 1.5708
