@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://fjjmtmanx7pl"]
+[gd_scene load_steps=6 format=3 uid="uid://fjjmtmanx7pl"]
 
 [ext_resource type="Texture2D" uid="uid://ccrt81lwnwsm5" path="res://top-car-view-png-34876.png" id="1_foc8d"]
 [ext_resource type="Script" path="res://car.gd" id="2_vc372"]
 [ext_resource type="Script" path="res://data.gd" id="3_vfyoy"]
+[ext_resource type="Script" path="res://traffic_light.gd" id="4_q3h8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1befg"]
 size = Vector2(152, 367)
@@ -35,3 +36,26 @@ script = ExtResource("3_vfyoy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -150)
 shape = SubResource("RectangleShape2D_1befg")
+
+[node name="TrafficLight" type="Node2D" parent="."]
+script = ExtResource("4_q3h8g")
+
+[node name="Timer" type="Timer" parent="TrafficLight"]
+
+[node name="RedLight" type="ColorRect" parent="TrafficLight"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.765478, 0.129063, 0.303356, 1)
+
+[node name="YellowLight" type="ColorRect" parent="TrafficLight"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.705882, 0.67451, 0.0509804, 1)
+
+[node name="GreenLight" type="ColorRect" parent="TrafficLight"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.635511, 0.193543, 1)
