@@ -1,4 +1,10 @@
+<<<<<<< Updated upstream
 ColorRect
 Timer
 Sprite2D
 Node2D
+=======
+CollisionPolygon2D
+StaticBody2D
+CollisionShape2D
+>>>>>>> Stashed changes

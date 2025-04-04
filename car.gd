@@ -13,8 +13,38 @@ var acceleration = 0
 var acceleration_time = 2
 signal speed_data(speed)
 
+@export var stop_position: Vector2 = Vector2(559, -517)  # Set the stop sign's coordinates
+@export var stop_tolerance: float = 10  # Tolerance for stopping (in pixels)
+@export var lane_tolerance: float = 50  # Lane tolerance for the stop sign (road size)
+
+var stopped_early = false  # Flag to track if the car stopped early
+
+var announcement_label: Label  # Reference to the announcement label
+
 func _ready():
 	z_index = 100
+<<<<<<< Updated upstream
+=======
+	print("✅ _ready() called: Script is running")
+
+	# Find the AnnouncementLabel node in the scene
+	announcement_label = $AnnouncementLabel  # Make sure to reference the correct node path
+
+	if announcement_label:
+		announcement_label.visible = false  # Hide the label by default
+	else:
+		print("❌ Missing AnnouncementLabel node")
+
+	if has_node("BrakeLights"):
+		print("✅ Found BrakeLights node")
+	else:
+		print("❌ Missing BrakeLights node")
+
+	if has_node("UI/DirectionLabel"):
+		print("✅ Found UI/DirectionLabel node")
+	else:
+		print("❌ Missing UI/DirectionLabel node")
+>>>>>>> Stashed changes
 
 func speed_change(delta, input):
 	var air_density = 1.2
@@ -114,3 +144,45 @@ func _physics_process(delta):
 
 	speed_data.emit(speed * 3.6)
 	print("📦 _physics_process: speed =", speed, "direction =", direction)
+<<<<<<< Updated upstream
+=======
+
+	# Stop sign logic: Check if the car is close enough to stop
+	if is_approaching_stop_sign():
+		if !stopped_early:
+			print("🛑 You need to stop at the stop sign.")
+			# Show the announcement in the game
+			if announcement_label:
+				announcement_label.text = "Drive safely! You must stop at the stop sign."
+				announcement_label.visible = true
+			stopped_early = true
+		else:
+			print("✅ Stopped at the stop sign in time.")
+
+	# 🔴 Brake lights
+	if has_node("BrakeLights"):
+		$BrakeLights.visible = false
+		if direction == 0 and speed != 0:
+			$BrakeLights.visible = true
+			print("💡 Brake lights ON (idle braking)")
+		elif direction != 0 and sign(direction) != sign(speed):
+			$BrakeLights.visible = true
+			print("💡 Brake lights ON (reversing direction)")
+
+	# 🧭 UI direction indicator
+	if has_node("UI/DirectionLabel"):
+		var direction_text = "Idle"
+		if speed > 0:
+			direction_text = "Forward"
+		elif speed < 0:
+			direction_text = "Reverse"
+		$UI/DirectionLabel.text = "Direction: " + direction_text
+		print("🧭 Direction UI =", direction_text)
+
+# Check if the car is approaching the stop sign
+func is_approaching_stop_sign() -> bool:
+	var distance = stop_position.distance_to(global_position)
+	
+	# Check if the car is within lane tolerance and approaching from the right plane
+	return (distance < lane_tolerance) and (global_position.x > stop_position.x)
+>>>>>>> Stashed changes

@@ -14,6 +14,7 @@ position = Vector2(-42.0455, -3123.3)
 
 [node name="Car" parent="." instance=ExtResource("1_sdmxv")]
 position = Vector2(23.8636, -1023.86)
+<<<<<<< Updated upstream
 
 [node name="TrafficLight" type="Node2D" parent="."]
 position = Vector2(697.159, -1420.45)
@@ -47,3 +48,7 @@ offset_right = 39.8295
 offset_bottom = -40.0568
 color = Color(0, 0.635511, 0.193543, 1)
 metadata/_edit_use_anchors_ = true
+=======
+stop_tolerance = 1e+14
+lane_tolerance = 1e+14
+>>>>>>> Stashed changes
