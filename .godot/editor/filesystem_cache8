@@ -1,25 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743079955
-1gimnazija.png::CompressedTexture2D::820133196362551038::1743079569::1743079569::1::::<><>::
-2.3-1000x1000.png::CompressedTexture2D::7880019756014568963::1743077851::1743077851::1::::<><>::
-90.png::CompressedTexture2D::104886918906012489::1743071617::1743076647::1::::<><>::
-90pag.tscn::PackedScene::1665908355297735512::1743073101::0::1::::<><>::uid://bq2qb5sh46qv::::res://90.png
-car.gd::GDScript::-1::1743077056::0::1::::<>CharacterBody2D<>::
-car.tscn::PackedScene::370092516938076433::1743077056::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd
-ceļš.png::CompressedTexture2D::7330166410921844189::1741259636::1743076646::1::::<><>::
-city.tscn::PackedScene::8043895768269352779::1743078538::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>uid://y12edmo3wuqi::::res://map.tscn
-CityMap.tscn::PackedScene::3903277245483234242::1743076601::0::1::::<><>::uid://c07asp5yj7u3y::::res://image.png
-data.gd::GDScript::-1::1743076601::0::1::::<>Label<>::
-kojas.png::CompressedTexture2D::3699910580839609377::1743078461::1743078461::1::::<><>::
-krustojums.tscn::PackedScene::7775327863027580238::1743073102::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png
-labaiscels.tscn::PackedScene::1830659185800940765::1743073101::0::1::::<><>::uid://dco11f6xedp6l::::res://ceļš.png
-line_2d.gd::GDScript::-1::1743076601::0::1::::<>Node2D<>::
-map.tscn::PackedScene::1739852747680750632::1743078538::0::1::::<><>::uid://di1orqc5m1p3k::::res://krustojums.tscn<>uid://1c1xo4lewhuj::::res://labaiscels.tscn<>uid://xy8jc52be6ci::::res://90pag.tscn<>uid://75eok75q6jmr::::res://Stop_sign.png<>uid://dkje1k4cya8hr::::res://2.3-1000x1000.png<>uid://bsyi8svmm1qtl::::res://kojas.png
-node_2d.tscn::PackedScene::4422916983665055790::1743076601::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
-README.md::TextFile::-1::1743076601::0::1::::<><>::
-ROAD_ELEMENTS.png::CompressedTexture2D::995850968800955596::1743070469::1743076646::1::::<><>::
-Screenshot (2).png::CompressedTexture2D::7569429622759319582::1743079007::1743079008::1::::<><>::
-Screenshot (6).png::CompressedTexture2D::5602610479810395413::1743079955::1743079955::1::::<><>::
-Stop_sign.png::CompressedTexture2D::2308242774177480069::1743077653::1743077653::1::::<><>::
-top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1740652841::1743076646::1::::<><>::
-trase.tscn::PackedScene::6158554280457243120::1743076601::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
+::res://::1743675167
+1gimnazija.png::CompressedTexture2D::820133196362551038::1743672240::1743672252::1::::<><>::
+2.3-1000x1000.png::CompressedTexture2D::7880019756014568963::1743672240::1743672253::1::::<><>::
+90.png::CompressedTexture2D::104886918906012489::1743071618::1743672253::1::::<><>::
+90pag.tscn::PackedScene::1665908355297735512::1743075152::0::1::::<><>::uid://bq2qb5sh46qv::::res://90.png
+car.gd::GDScript::-1::1743672240::0::1::::<>CharacterBody2D<>::
+car.tscn::PackedScene::370092516938076433::1743674666::0::1::::<><>::uid://ccrt81lwnwsm5::::res://top-car-view-png-34876.png<>res://car.gd<>res://data.gd<>res://traffic_light.gd
+ceļš.png::CompressedTexture2D::7330166410921844189::1741259638::1743672252::1::::<><>::
+city.tscn::PackedScene::8043895768269352779::1743674666::0::1::::<><>::uid://fjjmtmanx7pl::::res://car.tscn<>uid://y12edmo3wuqi::::res://map.tscn<>res://traffic_light.gd
+CityMap.tscn::PackedScene::3903277245483234242::1742457936::0::1::::<><>::uid://c07asp5yj7u3y::::res://image.png
+data.gd::GDScript::-1::1742456474::0::1::::<>Label<>::
+image.png::CompressedTexture2D::2273668877283695627::1743675167::1743675168::1::::<><>::
+kojas.png::CompressedTexture2D::3699910580839609377::1743672240::1743672252::1::::<><>::
+krustojums.tscn::PackedScene::7775327863027580238::1743075152::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png
+labaiscels.tscn::PackedScene::1830659185800940765::1743075152::0::1::::<><>::uid://dco11f6xedp6l::::res://ceļš.png
+line_2d.gd::GDScript::-1::1742456474::0::1::::<>Node2D<>::
+map.tscn::PackedScene::1739852747680750632::1743674666::0::1::::<><>::uid://di1orqc5m1p3k::::res://krustojums.tscn<>uid://1c1xo4lewhuj::::res://labaiscels.tscn<>uid://xy8jc52be6ci::::res://90pag.tscn<>uid://75eok75q6jmr::::res://Stop_sign.png<>uid://dkje1k4cya8hr::::res://2.3-1000x1000.png<>uid://bsyi8svmm1qtl::::res://kojas.png<>uid://df3xnum112e35::::res://Screenshot (2).png<>uid://lxjqd384s847::::res://1gimnazija.png<>uid://cl27f8rrcwcc0::::res://Screenshot (6).png
+node_2d.tscn::PackedScene::4422916983665055790::1742811282::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
+README.md::TextFile::-1::1740652842::0::1::::<><>::
+Screenshot 2025-04-03 at 12.41.57.png::CompressedTexture2D::2414273370772387948::1743673318::1743673319::1::::<><>::
+Screenshot 2025-04-03 at 12.42.58.png::CompressedTexture2D::9113351304115249916::1743673379::1743673380::1::::<><>::
+Screenshot 2025-04-03 at 12.46.06.png::CompressedTexture2D::7110234967796416487::1743673567::1743673567::1::::<><>::
+traffic_light.gd::GDScript::-1::1743674666::0::1::::<>Node2D<>::
+ROAD_ELEMENTS.png::CompressedTexture2D::995850968800955596::1743070470::1743672252::1::::<><>::
+Screenshot (2).png::CompressedTexture2D::7569429622759319582::1743672240::1743672252::1::::<><>::
+Screenshot (6).png::CompressedTexture2D::5602610479810395413::1743672240::1743672253::1::::<><>::
+Stop_sign.png::CompressedTexture2D::2308242774177480069::1743672240::1743672252::1::::<><>::
+top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1740652842::1743672252::1::::<><>::
+trase.tscn::PackedScene::6158554280457243120::1742811282::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
