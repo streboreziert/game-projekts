@@ -21,6 +21,14 @@ var stopped_early = false  # Flag to track if the car stopped early
 
 var announcement_label: Label  # Reference to the announcement label
 
+@export var stop_position: Vector2 = Vector2(559, -517)  # Set the stop sign's coordinates
+@export var stop_tolerance: float = 10  # Tolerance for stopping (in pixels)
+@export var lane_tolerance: float = 50  # Lane tolerance for the stop sign (road size)
+
+var stopped_early = false  # Flag to track if the car stopped early
+
+var announcement_label: Label  # Reference to the announcement label
+
 func _ready():
 	z_index = 100
 <<<<<<< Updated upstream
@@ -159,6 +167,18 @@ func _physics_process(delta):
 		else:
 			print("✅ Stopped at the stop sign in time.")
 
+	# Stop sign logic: Check if the car is close enough to stop
+	if is_approaching_stop_sign():
+		if !stopped_early:
+			print("🛑 You need to stop at the stop sign.")
+			# Show the announcement in the game
+			if announcement_label:
+				announcement_label.text = "Drive safely! You must stop at the stop sign."
+				announcement_label.visible = true
+			stopped_early = true
+		else:
+			print("✅ Stopped at the stop sign in time.")
+
 	# 🔴 Brake lights
 	if has_node("BrakeLights"):
 		$BrakeLights.visible = false
@@ -185,4 +205,7 @@ func is_approaching_stop_sign() -> bool:
 	
 	# Check if the car is within lane tolerance and approaching from the right plane
 	return (distance < lane_tolerance) and (global_position.x > stop_position.x)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://::1743675167
 1gimnazija.png::CompressedTexture2D::820133196362551038::1743672240::1743672252::1::::<><>::
 2.3-1000x1000.png::CompressedTexture2D::7880019756014568963::1743672240::1743672253::1::::<><>::
@@ -30,6 +31,8 @@ Stop_sign.png::CompressedTexture2D::2308242774177480069::1743672240::1743672252:
 top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1740652842::1743672252::1::::<><>::
 trase.tscn::PackedScene::6158554280457243120::1742811282::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
 =======
+=======
+>>>>>>> Stashed changes
 ::res://::1743768714
 1gimnazija.png::CompressedTexture2D::820133196362551038::1743083169::1743671483::1::::<><>::
 2.3-1000x1000.png::CompressedTexture2D::7880019756014568963::1743081451::1743671483::1::::<><>::
@@ -66,4 +69,7 @@ top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1740656441
 trase.tscn::PackedScene::6158554280457243120::1743080201::0::1::::<><>::uid://ognrxcr68hma::::res://ROAD_ELEMENTS.png<>uid://dco11f6xedp6l::::res://ceļš.png
 tveidakrust.png::CompressedTexture2D::3895638854489383098::1743679809::1743679809::1::::<><>::
 tveidakrust.tscn::PackedScene::8201629748880251790::1743765866::0::1::::<><>::uid://bvrcuq2n5wpxa::::res://tveidakrust.png
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
