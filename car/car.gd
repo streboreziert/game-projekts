@@ -8,16 +8,18 @@ var braking_deceleration = 10.0
 var max_reverse_speed = 30.0 / 3.6
 var mass = 1500
 
-var steer_time = 0.2
-var steer_input = 0.0
+var steer_time = 0.5
+var steering_linearity = 1.2
 var centering_time = steer_time / 2
+var steer_input = 0.0
 
 var acceleration_time = 1
-var decceleration_time = 0.2
+var acceleration_linearity = 0.6
+var deceleration_time = 0.2
 var direction = 0
 
 var car_length = 4.2
-var max_steering_angle = 45 
+var max_steering_angle = PI * (55.0/180.0)
 
 
 var max_g_force = 10.0
@@ -81,13 +83,13 @@ func _physics_process(delta):
 		if direction > 1:
 			direction = 1
 	elif Input.is_action_pressed("ui_down"):
-		direction -= delta/decceleration_time
+		direction -= delta/deceleration_time
 		if direction < -1:
 			direction = -1
 	else:
 		direction = 0
 	
-	speed_change(delta, sign(direction)*abs(direction)**0.6)
+	speed_change(delta, sign(direction)*abs(direction)**acceleration_linearity)
 
 	velocity = Vector2.UP.rotated(rotation) * speed * m_to_px
 	move_and_slide()
@@ -122,17 +124,19 @@ func _physics_process(delta):
 		else:
 			steer_input -= sign(steer_input) * delta/centering_time
 		
+	var steer_pos = steer_input
+	if steer_input != 0:
+		var steering_radius = car_length / abs(cos(PI/2 - abs(steer_input*max_steering_angle)))
+		print("cos bija: ", cos(PI/2 - abs(steer_input*max_steering_angle)))
+		var side_g_force = abs(speed)**2/steering_radius
+		if side_g_force > max_g_force:
+			steering_radius = abs(speed)**2/max_g_force
+			steer_pos = sign(steer_input) * (PI/2 - acos(car_length/steering_radius))/max_steering_angle
+			
+		print("radius: ", steering_radius, "	speed: ", speed, "	angle: ", abs(steer_input*max_steering_angle))
+		rotation += (speed/steering_radius) * steer_input * delta
 
-	var min_steer_radius = 12.0
-	var max_steer_radius = 20.0
-	var abs_speed = abs(speed)
-
-	if speed != 0 and steer_input != 0:
-		var steer_radius = lerp(min_steer_radius, max_steer_radius, clamp(abs_speed / 100.0, 0, 1))
-		var turn_amount = (speed / steer_radius) * sign(steer_input)*(abs(steer_input)**1.6) * delta
-		rotation += turn_amount
-		print("↪️ Steering: speed =", speed, "turn =", turn_amount)
 
 	speed_data.emit(speed * 3.6)
-	steering_pos.emit(sign(steer_input)*(abs(steer_input)**1.6))
-	print("📦 _physics_process: speed =", speed, "direction =", direction)
+	steering_pos.emit(steer_pos)
+	#print("📦 _physics_process: speed =", speed, "direction =", direction)
