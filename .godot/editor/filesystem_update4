@@ -1,21 +1,2 @@
-res://city.tscn
-res://map.tscn
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-res://car.tscn
-res://traffic_light.gd
-=======
-=======
->>>>>>> Stashed changes
-res://90pag.tscn
-res://krustojums.tscn
-res://labaiscels.tscn
-res://minipagr.tscn
-res://pagr ar caurumu.tscn
-res://aplis.tscn
-res://tveidakrust.tscn
-res://celaposms.tscn
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+res://game.tscn
+res://car/car.tscn

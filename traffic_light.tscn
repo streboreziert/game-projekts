@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://doj51qt7f0v5v"]
+
+[ext_resource type="Script" path="res://traffic_light.gd" id="1_vmuxy"]
+
+[node name="TrafficLight" type="Node2D"]
+script = ExtResource("1_vmuxy")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="RedLight" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.765478, 0.129063, 0.303356, 1)
+
+[node name="YellowLight" type="ColorRect" parent="."]
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 80.0
+color = Color(0.705882, 0.67451, 0.0509804, 1)
+
+[node name="GreenLight" type="ColorRect" parent="."]
+offset_top = 80.0
+offset_right = 40.0
+offset_bottom = 120.0
+color = Color(0, 0.635511, 0.193543, 1)

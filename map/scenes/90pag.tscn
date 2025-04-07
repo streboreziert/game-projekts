@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://xy8jc52be6ci"]
+
+[ext_resource type="Texture2D" uid="uid://bq2qb5sh46qv" path="res://map/images/90.png" id="1_fkhg4"]
+
+
+[node name="Node2D" type="StaticBody2D"]
+scale = Vector2(2, 2)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(3699, -1960)
+polygon = PackedVector2Array(-4163, 2425, -4161, 2181, -4161, 2027, -4154, 1953, -4141, 1900, -4121, 1840, -4097, 1794, -4058, 1727, -4005, 1665, -3958, 1620, -3900, 1589, -3833, 1553, -3775, 1531, -3708, 1513, -3624, 1501, -3236, 1502, -3236, 1495, -3760, 1500, -3810, 1528, -3866, 1555, -3944, 1597, -4000, 1637, -4029, 1671, -4074, 1721, -4132, 1856, -4166, 1975, -4164, 2425)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(3699, -1960)
+polygon = PackedVector2Array(-3841, 2425, -3841, 2034, -3824, 1958, -3793, 1907, -3744, 1866, -3690, 1838, -3635, 1828, -3565, 1822, -3239, 1819, -3236, 1819, -3240, 1827, -3306.5, 1824.5, -3552, 1825, -3603.5, 1828, -3663.5, 1837.5, -3714.5, 1854.5, -3769.5, 1891, -3813.5, 1952.5, -3832.5, 2017.5, -3832, 2075.5, -3834.5, 2337.5, -3832, 2424)
+
+[node name="RoadElements" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("1_fkhg4")
+metadata/_edit_group_ = true

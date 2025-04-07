@@ -45,7 +45,10 @@ func set_light_state(new_state):
 	match state:
 		LightState.RED:
 			red.visible = true
-		LightState.YELLOW_BEFORE_GREEN, LightState.YELLOW_BEFORE_RED:
+		LightState.YELLOW_BEFORE_GREEN:
+			yellow.visible = true
+			red.visible = true
+		LightState.YELLOW_BEFORE_RED:
 			yellow.visible = true
 		LightState.GREEN:
 			green.visible = true
