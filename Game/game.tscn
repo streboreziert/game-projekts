@@ -6,7 +6,8 @@
 [node name="Game" type="Node2D"]
 
 [node name="map" parent="." instance=ExtResource("1_ia2ly")]
-scale = Vector2(1.45, 1.45)
+position = Vector2(-51, 31)
+scale = Vector2(1.55, 1.55)
 
 [node name="Car" parent="." instance=ExtResource("2_2ldt4")]
-position = Vector2(227, 947)
+position = Vector2(245, 1131)

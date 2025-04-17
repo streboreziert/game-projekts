@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://fjjmtmanx7pl"]
+[gd_scene load_steps=8 format=3 uid="uid://fjjmtmanx7pl"]
 
 [ext_resource type="Texture2D" uid="uid://ccrt81lwnwsm5" path="res://car/images/top-car-view-png-34876.png" id="1_foc8d"]
 [ext_resource type="Script" path="res://car/car.gd" id="1_twjbx"]
 [ext_resource type="Script" path="res://car/speed_display.gd" id="3_vfyoy"]
+[ext_resource type="Script" path="res://car/camera.gd" id="3_xr4hj"]
 [ext_resource type="Texture2D" uid="uid://wnegdsxby5m" path="res://car/images/steering-wheel-14.png" id="4_kxcmu"]
 [ext_resource type="Script" path="res://car/steering_wheel.gd" id="5_115s1"]
 
@@ -19,7 +20,8 @@ offset = Vector2(-113.5, -450)
 
 [node name="Camera2D" type="Camera2D" parent="Car"]
 ignore_rotation = false
-zoom = Vector2(0.45, 0.45)
+zoom = Vector2(0.125, 0.125)
+script = ExtResource("3_xr4hj")
 
 [node name="Display" type="Label" parent="Car/Camera2D"]
 offset_left = -130.0

@@ -8,8 +8,8 @@ var braking_deceleration = 10.0
 var max_reverse_speed = 30.0 / 3.6
 var mass = 1500
 
-var steer_time = 0.5
-var steering_linearity = 1.2
+var steer_time = 0.7
+var steering_linearity = 1.3
 var centering_time = steer_time / 2
 var steer_input = 0.0
 
@@ -19,15 +19,17 @@ var deceleration_time = 0.2
 var direction = 0
 
 var car_length = 4.2
-var max_steering_angle = PI * (55.0/180.0)
+#var max_steering_angle = PI * (45.0/180.0)
+var max_steering_angle
 
 
-var max_g_force = 10.0
+var max_g_force = 1000.0
 
 signal speed_data(speed)
 signal steering_pos(steering_input)
 
 func _ready():
+	max_steering_angle = 45 * PI / 180
 	z_index = 100
 
 func speed_change(delta, input):
@@ -70,19 +72,19 @@ func new_speed(rolling, drag, power, delta):
 		var temp_speed = sqrt((2.0 / mass) * new_energy)
 		if ((temp_speed-abs(speed))/delta) > max_g_force:
 			temp_speed = abs(speed) + max_g_force * delta
-			print("overg")
-			print(temp_speed)
+			#print("overg")
+			#print(temp_speed)
 		return temp_speed
 	else:
 		return 0
 
 func _physics_process(delta):
 
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up") or Input.is_key_pressed(KEY_W):
 		direction += delta/acceleration_time
 		if direction > 1:
 			direction = 1
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down") or Input.is_key_pressed(KEY_S):
 		direction -= delta/deceleration_time
 		if direction < -1:
 			direction = -1
@@ -100,18 +102,19 @@ func _physics_process(delta):
 		for i in range(collision_count):
 			var collision = get_slide_collision(i)
 			if collision:
-				print("💥 Collision with:", collision.get_collider())
-				speed = -speed * 0.1
+				var collision_angle = collision.get_angle(Vector2.UP.rotated(rotation))
+				print("💥 Collision angle:", collision.get_angle() * 180 / PI)
+				velocity = velocity.bounce(collision.get_normal())
 				break
 
 	# ✅ Realistic steering
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") or Input.is_key_pressed(KEY_A):
 		steer_input -= delta/steer_time
 		if steer_input > 0:
 			steer_input -= delta/steer_time
 		if steer_input < -1:
 			steer_input = -1
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
 		steer_input += delta/steer_time
 		if steer_input < 0:
 			steer_input += delta/steer_time
@@ -127,16 +130,19 @@ func _physics_process(delta):
 	var steer_pos = steer_input
 	if steer_input != 0:
 		var steering_radius = car_length / abs(cos(PI/2 - abs(steer_input*max_steering_angle)))
-		print("cos bija: ", cos(PI/2 - abs(steer_input*max_steering_angle)))
 		var side_g_force = abs(speed)**2/steering_radius
 		if side_g_force > max_g_force:
 			steering_radius = abs(speed)**2/max_g_force
 			steer_pos = sign(steer_input) * (PI/2 - acos(car_length/steering_radius))/max_steering_angle
-			
-		print("radius: ", steering_radius, "	speed: ", speed, "	angle: ", abs(steer_input*max_steering_angle))
+		#print("radius: ", steering_radius, "	speed: ", speed, "	angle: ", abs(steer_input*max_steering_angle)*180/PI)
+		#print("side gforce: ", side_g_force)
 		rotation += (speed/steering_radius) * steer_input * delta
 
 
 	speed_data.emit(speed * 3.6)
 	steering_pos.emit(steer_pos)
 	#print("📦 _physics_process: speed =", speed, "direction =", direction)
+
+
+func _on_ui_attributes(angle: Variant) -> void:
+	max_steering_angle = angle
