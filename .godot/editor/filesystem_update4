@@ -1,4 +1,5 @@
+res://data.gd
+res://car.tscn
 res://city.tscn
 res://map.tscn
-res://car.tscn
-res://traffic_light.gd
+res://car.gd

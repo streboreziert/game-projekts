@@ -22,6 +22,10 @@ position = Vector2(10, -2.15983)
 scale = Vector2(2, 2.15983)
 ignore_rotation = false
 zoom = Vector2(0.1, 0.1)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 7.0
 
 [node name="data" type="Label" parent="Car/Camera2D"]
 offset_left = -2522.0
@@ -59,3 +63,5 @@ visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0.635511, 0.193543, 1)
+
+[connection signal="speed_data" from="." to="Car/Camera2D/data" method="_on_car_speed_data"]

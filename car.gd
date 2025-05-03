@@ -2,11 +2,11 @@ extends CharacterBody2D
 
 var m_to_px = 100 * scale[0]
 var speed = 0
-var engine_power = 143
+var engine_power = 100
 var reverse_power = engine_power * 0.6
 var braking_deceleration = 10.0
 var max_reverse_speed = 30.0 / 3.6
-var mass = 1500
+var mass = 1
 
 var tire_grip = 0.2
 var acceleration = 0
@@ -57,10 +57,6 @@ func new_speed(rolling, drag, power, delta):
 	var new_energy = kinetic_energy + (power - drag * abs(speed) - rolling * abs(speed)) * delta
 	if new_energy > 0:
 		var temp_speed = sqrt((2.0 / mass) * new_energy)
-		if ((temp_speed-abs(speed))/delta) > 10.0:
-			temp_speed = abs(speed) + 10 * delta
-			print("overg")
-			print(temp_speed)
 		return temp_speed
 	else:
 		return 0

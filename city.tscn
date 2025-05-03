@@ -47,3 +47,10 @@ offset_right = 39.8295
 offset_bottom = -40.0568
 color = Color(0, 0.635511, 0.193543, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="TrafficLight"]
+offset_left = 117.784
+offset_top = 48.3523
+offset_right = 157.784
+offset_bottom = 88.3523
+color = Color(0.227082, 0.347114, 0.138136, 1)
