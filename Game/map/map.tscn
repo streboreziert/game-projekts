@@ -1,21 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://y12edmo3wuqi"]
+[gd_scene load_steps=9 format=3 uid="uid://y12edmo3wuqi"]
 
 [ext_resource type="PackedScene" uid="uid://di1orqc5m1p3k" path="res://map/scenes/krustojums.tscn" id="1_3lfl3"]
 [ext_resource type="PackedScene" uid="uid://c8and52hns52m" path="res://map/scenes/pagr ar caurumu.tscn" id="1_briok"]
 [ext_resource type="PackedScene" uid="uid://dn1om2rfifcx" path="res://map/scenes/aplis.tscn" id="1_u8jul"]
 [ext_resource type="PackedScene" uid="uid://1c1xo4lewhuj" path="res://map/scenes/labaiscels.tscn" id="2_yotca"]
 [ext_resource type="PackedScene" uid="uid://xy8jc52be6ci" path="res://map/scenes/90pag.tscn" id="3_32ajh"]
-[ext_resource type="Texture2D" uid="uid://75eok75q6jmr" path="res://map/images/Stop_sign.png" id="4_i321x"]
-[ext_resource type="Texture2D" uid="uid://dkje1k4cya8hr" path="res://map/images/2.3-1000x1000.png" id="5_ka03m"]
-[ext_resource type="Texture2D" uid="uid://bsyi8svmm1qtl" path="res://map/images/kojas.png" id="6_kynd7"]
-[ext_resource type="Texture2D" uid="uid://df3xnum112e35" path="res://map/images/Screenshot (2).png" id="7_dbq4y"]
-[ext_resource type="Texture2D" uid="uid://lxjqd384s847" path="res://map/images/1gimnazija.png" id="8_0i1mq"]
-[ext_resource type="Texture2D" uid="uid://cl27f8rrcwcc0" path="res://map/images/Screenshot (6).png" id="9_dwoou"]
 [ext_resource type="PackedScene" uid="uid://cb7w8xwbdidew" path="res://map/scenes/minipagr.tscn" id="11_nc3du"]
-[ext_resource type="Texture2D" uid="uid://s3eu308rjvp5" path="res://map/images/ilja polis.png" id="13_5mo40"]
 [ext_resource type="PackedScene" uid="uid://4jjppegaw4pl" path="res://map/scenes/celaposms.tscn" id="14_px8fb"]
 [ext_resource type="PackedScene" uid="uid://do36v5dvnp5ha" path="res://map/scenes/tveidakrust.tscn" id="15_g8ye2"]
-[ext_resource type="Texture2D" uid="uid://o77hhygf5bd8" path="res://map/images/genadijs.png" id="16_17akk"]
 
 [node name="map" type="Node2D"]
 
@@ -47,6 +39,7 @@ position = Vector2(-1848, -556)
 rotation = 4.71239
 
 [node name="krustojums" parent="." instance=ExtResource("1_3lfl3")]
+position = Vector2(-4, 3)
 scale = Vector2(1, 1)
 
 [node name="Ceļš" parent="." instance=ExtResource("2_yotca")]
@@ -91,57 +84,9 @@ position = Vector2(3662, -2)
 position = Vector2(4878, -1197)
 rotation = 3.14159
 
-[node name="StopSign" type="Sprite2D" parent="."]
-position = Vector2(559, -517)
-scale = Vector2(0.577303, 0.577303)
-texture = ExtResource("4_i321x")
-
-[node name="StopSign2" type="Sprite2D" parent="."]
-position = Vector2(-539, 574)
-rotation = 3.14159
-scale = Vector2(0.577303, 0.577303)
-texture = ExtResource("4_i321x")
-
-[node name="2_3-1000x1000" type="Sprite2D" parent="."]
-position = Vector2(572.75, 593.75)
-scale = Vector2(0.4345, 0.4345)
-texture = ExtResource("5_ka03m")
-
-[node name="2_3-1000x1001" type="Sprite2D" parent="."]
-position = Vector2(-575, -525)
-scale = Vector2(0.4345, 0.4345)
-texture = ExtResource("5_ka03m")
-
-[node name="Kojas" type="Sprite2D" parent="."]
-position = Vector2(-5302, -2777)
-rotation = 0.261799
-scale = Vector2(16.5173, 16.5173)
-texture = ExtResource("6_kynd7")
-
-[node name="Screenshot(2)" type="Sprite2D" parent="."]
-position = Vector2(1648, 4304)
-rotation = -0.174533
-scale = Vector2(7.5628, 7.5628)
-texture = ExtResource("7_dbq4y")
-
-[node name="1Gimnazija" type="Sprite2D" parent="."]
-position = Vector2(5645, 4197)
-scale = Vector2(9.99599, 9.99599)
-texture = ExtResource("8_0i1mq")
-
-[node name="Screenshot(6)" type="Sprite2D" parent="."]
-position = Vector2(2922, -5907)
-scale = Vector2(6.06933, 6.06933)
-texture = ExtResource("9_dwoou")
-
 [node name="Ceļš6" parent="." instance=ExtResource("2_yotca")]
 position = Vector2(-5687, 2228)
 rotation = 0.541052
-
-[node name="IljaPolis" type="Sprite2D" parent="."]
-position = Vector2(-10188, -427)
-scale = Vector2(1.70679, 1.70679)
-texture = ExtResource("13_5mo40")
 
 [node name="Node2D7" parent="." instance=ExtResource("11_nc3du")]
 z_index = 1
@@ -270,9 +215,3 @@ rotation = -1.05069
 [node name="Node2D24" parent="." instance=ExtResource("3_32ajh")]
 position = Vector2(-9212, -21084)
 rotation = 0.527089
-
-[node name="Genadijs" type="Sprite2D" parent="."]
-position = Vector2(-10020, -14115)
-rotation = 0.523599
-scale = Vector2(7.40495, 7.40495)
-texture = ExtResource("16_17akk")

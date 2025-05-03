@@ -4,6 +4,3 @@ res://test.tscn
 res://ui.tscn
 res://map/map.tscn
 res://car/car.gd
-res://ui.gd
-res://car/steering_wheel.gd
-res://map/scenes/90pag.tscn

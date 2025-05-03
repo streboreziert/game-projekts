@@ -79,70 +79,61 @@ func new_speed(rolling, drag, power, delta):
 		return 0
 
 func _physics_process(delta):
-
 	if Input.is_action_pressed("ui_up") or Input.is_key_pressed(KEY_W):
-		direction += delta/acceleration_time
+		direction += delta / acceleration_time
 		if direction > 1:
 			direction = 1
 	elif Input.is_action_pressed("ui_down") or Input.is_key_pressed(KEY_S):
-		direction -= delta/deceleration_time
+		direction -= delta / deceleration_time
 		if direction < -1:
 			direction = -1
 	else:
 		direction = 0
-	
-	speed_change(delta, sign(direction)*abs(direction)**acceleration_linearity)
+
+	speed_change(delta, sign(direction) * abs(direction) ** acceleration_linearity)
 
 	velocity = Vector2.UP.rotated(rotation) * speed * m_to_px
 	move_and_slide()
 
-	# ✅ Fixed for Godot 4: stop on collision using get_slide_collision_count()
 	var collision_count = get_slide_collision_count()
 	if collision_count > 0:
 		for i in range(collision_count):
 			var collision = get_slide_collision(i)
 			if collision:
-				var collision_angle = collision.get_angle(Vector2.UP.rotated(rotation))
-				print("💥 Collision angle:", collision.get_angle() * 180 / PI)
+				var min_speed = 5.0 / 3.6  # 5 km/h in m/s ≈ 1.39
+				if abs(speed) > min_speed:
+					speed = sign(speed) * min_speed
 				velocity = velocity.bounce(collision.get_normal())
 				break
 
-	# ✅ Realistic steering
 	if Input.is_action_pressed("ui_left") or Input.is_key_pressed(KEY_A):
-		steer_input -= delta/steer_time
+		steer_input -= delta / steer_time
 		if steer_input > 0:
-			steer_input -= delta/steer_time
+			steer_input -= delta / steer_time
 		if steer_input < -1:
 			steer_input = -1
 	elif Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
-		steer_input += delta/steer_time
+		steer_input += delta / steer_time
 		if steer_input < 0:
-			steer_input += delta/steer_time
+			steer_input += delta / steer_time
 		if steer_input > 1:
 			steer_input = 1
-			
 	elif !Input.is_action_pressed("ui_left") and !Input.is_action_pressed("ui_right") and steer_input != 0:
-		if abs(sign(steer_input) * delta/centering_time) > abs(steer_input):
+		if abs(sign(steer_input) * delta / centering_time) > abs(steer_input):
 			steer_input = 0
 		else:
-			steer_input -= sign(steer_input) * delta/centering_time
-		
+			steer_input -= sign(steer_input) * delta / centering_time
+
 	var steer_pos = steer_input
 	if steer_input != 0:
-		var steering_radius = car_length / abs(cos(PI/2 - abs(steer_input*max_steering_angle)))
-		var side_g_force = abs(speed)**2/steering_radius
+		var steering_radius = car_length / abs(cos(PI / 2 - abs(steer_input * max_steering_angle)))
+		var side_g_force = abs(speed) ** 2 / steering_radius
 		if side_g_force > max_g_force:
-			steering_radius = abs(speed)**2/max_g_force
-			steer_pos = sign(steer_input) * (PI/2 - acos(car_length/steering_radius))/max_steering_angle
-		#print("radius: ", steering_radius, "	speed: ", speed, "	angle: ", abs(steer_input*max_steering_angle)*180/PI)
-		#print("side gforce: ", side_g_force)
-		rotation += (speed/steering_radius) * steer_input * delta
-
+			steering_radius = abs(speed) ** 2 / max_g_force
+			steer_pos = sign(steer_input) * (PI / 2 - acos(car_length / steering_radius)) / max_steering_angle
+		rotation += (speed / steering_radius) * steer_input * delta
 
 	speed_data.emit(speed * 3.6)
 	steering_pos.emit(steer_pos)
-	#print("📦 _physics_process: speed =", speed, "direction =", direction)
-
-
 func _on_ui_attributes(angle: Variant) -> void:
 	max_steering_angle = angle
