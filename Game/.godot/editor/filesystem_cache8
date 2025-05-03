@@ -1,0 +1,50 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1744715777
+game.tscn::PackedScene::2601578883744212344::1744480588::0::1::::<><>::uid://y12edmo3wuqi::::res://map/map.tscn<>uid://fjjmtmanx7pl::::res://car/car.tscn<>uid://l48yycpwi30f::::res://ui.tscn
+image.png::CompressedTexture2D::2273668877283695627::1743842491::1743842529::1::::<><>::
+README.md::TextFile::-1::1743842491::0::1::::<><>::
+test.tscn::PackedScene::7253520217498283763::1744480588::0::1::::<><>::uid://fjjmtmanx7pl::::res://car/car.tscn<>uid://7nm82k5hxdp0::::res://image.png
+traffic_light.gd::GDScript::-1::1743843311::0::1::::<>Node2D<>::
+traffic_light.tscn::PackedScene::8162354073409325117::1743843312::0::1::::<><>::res://traffic_light.gd
+ui.gd::GDScript::-1::1744480199::0::1::::<>Node2D<>::
+ui.tscn::PackedScene::833992019062391239::1744480588::0::1::::<><>::res://ui.gd
+::res://car/::1744480588
+camera.gd::GDScript::-1::1744396345::0::1::::<>Camera2D<>::
+car.gd::GDScript::-1::1744480588::0::1::::<>CharacterBody2D<>::
+car.tscn::PackedScene::370092516938076433::1744480588::0::1::::<><>::uid://ccrt81lwnwsm5::::res://car/images/top-car-view-png-34876.png<>res://car/car.gd<>res://car/speed_display.gd<>res://car/camera.gd<>uid://wnegdsxby5m::::res://car/images/steering-wheel-14.png<>res://car/steering_wheel.gd
+speed_display.gd::GDScript::-1::1743843461::0::1::::<>Label<>::
+steering_wheel.gd::GDScript::-1::1744027547::0::1::::<>Sprite2D<>::
+::res://car/images/::1743844230
+steering-wheel-14.png::CompressedTexture2D::46213095294054240::1743843502::1743844230::1::::<><>::
+top-car-view-png-34876.png::CompressedTexture2D::4949527414160497406::1743842491::1743844230::1::::<><>::
+::res://map/::1743844159
+map.tscn::PackedScene::1739852747680750632::1743844154::0::1::::<><>::uid://di1orqc5m1p3k::::res://map/scenes/krustojums.tscn<>uid://c8and52hns52m::::res://map/scenes/pagr ar caurumu.tscn<>uid://dn1om2rfifcx::::res://map/scenes/aplis.tscn<>uid://1c1xo4lewhuj::::res://map/scenes/labaiscels.tscn<>uid://xy8jc52be6ci::::res://map/scenes/90pag.tscn<>uid://75eok75q6jmr::::res://map/images/Stop_sign.png<>uid://dkje1k4cya8hr::::res://map/images/2.3-1000x1000.png<>uid://bsyi8svmm1qtl::::res://map/images/kojas.png<>uid://df3xnum112e35::::res://map/images/Screenshot (2).png<>uid://lxjqd384s847::::res://map/images/1gimnazija.png<>uid://cl27f8rrcwcc0::::res://map/images/Screenshot (6).png<>uid://cb7w8xwbdidew::::res://map/scenes/minipagr.tscn<>uid://s3eu308rjvp5::::res://map/images/ilja polis.png<>uid://4jjppegaw4pl::::res://map/scenes/celaposms.tscn<>uid://do36v5dvnp5ha::::res://map/scenes/tveidakrust.tscn<>uid://o77hhygf5bd8::::res://map/images/genadijs.png
+::res://map/images/::1743844115
+1gimnazija.png::CompressedTexture2D::820133196362551038::1743842491::1743844054::1::::<><>::
+2.3-1000x1000.png::CompressedTexture2D::7880019756014568963::1743842491::1743844114::1::::<><>::
+90.png::CompressedTexture2D::104886918906012489::1743842491::1743844114::1::::<><>::
+brauktuve.png::CompressedTexture2D::2126582970693432003::1743842491::1743844114::1::::<><>::
+ceļš.png::CompressedTexture2D::7330166410921844189::1743842491::1743844113::1::::<><>::
+genadijs.png::CompressedTexture2D::1050659748407458955::1743842491::1743844114::1::::<><>::
+ilja polis.png::CompressedTexture2D::1321481857243800104::1743842491::1743844113::1::::<><>::
+kojas.png::CompressedTexture2D::3699910580839609377::1743842491::1743844113::1::::<><>::
+mini pagr2.png::CompressedTexture2D::6288841996822237298::1743842491::1743844113::1::::<><>::
+mini pagr.png::CompressedTexture2D::4882410966871379174::1743842491::1743844113::1::::<><>::
+ROAD_ELEMENTS.png::CompressedTexture2D::995850968800955596::1743842491::1743844113::1::::<><>::
+roundabout.png::CompressedTexture2D::8488707928630075793::1743842491::1743844115::1::::<><>::
+Screenshot 2025-04-03 at 12.41.57.png::CompressedTexture2D::2414273370772387948::1743842491::1743844114::1::::<><>::
+Screenshot 2025-04-03 at 12.42.58.png::CompressedTexture2D::9113351304115249916::1743842491::1743844114::1::::<><>::
+Screenshot 2025-04-03 at 12.46.06.png::CompressedTexture2D::7110234967796416487::1743842491::1743844113::1::::<><>::
+Screenshot (2).png::CompressedTexture2D::7569429622759319582::1743842491::1743844113::1::::<><>::
+Screenshot (6).png::CompressedTexture2D::5602610479810395413::1743842491::1743844113::1::::<><>::
+Stop_sign.png::CompressedTexture2D::2308242774177480069::1743842491::1743844113::1::::<><>::
+tveidakrust.png::CompressedTexture2D::3895638854489383098::1743842491::1743844113::1::::<><>::
+::res://map/scenes/::1743844154
+90pag.tscn::PackedScene::1665908355297735512::1743844112::0::1::::<><>::uid://bq2qb5sh46qv::::res://map/images/90.png
+aplis.tscn::PackedScene::239007757412795999::1743844112::0::1::::<><>::uid://ds681q7ktk5cv::::res://map/images/roundabout.png
+celaposms.tscn::PackedScene::2054629899435929837::1743844112::0::1::::<><>::uid://5kermrwchinr::::res://map/images/brauktuve.png
+krustojums.tscn::PackedScene::7775327863027580238::1743844112::0::1::::<><>::uid://ognrxcr68hma::::res://map/images/ROAD_ELEMENTS.png
+labaiscels.tscn::PackedScene::1830659185800940765::1743844112::0::1::::<><>::uid://dco11f6xedp6l::::res://map/images/ceļš.png
+minipagr.tscn::PackedScene::4910486246266384058::1743844112::0::1::::<><>::uid://cvumkrcct20nm::::res://map/images/mini pagr2.png
+pagr ar caurumu.tscn::PackedScene::7089869503475336474::1743844112::0::1::::<><>::uid://bq2qb5sh46qv::::res://map/images/90.png
+tveidakrust.tscn::PackedScene::8201629748880251790::1743844112::0::1::::<><>::uid://bvrcuq2n5wpxa::::res://map/images/tveidakrust.png
