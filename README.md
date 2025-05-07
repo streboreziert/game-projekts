@@ -2,7 +2,7 @@ Rīgas satiksmes simulators
 
 Autori: Alberts Druska, Matīss Kalniņš, Roberts Treize
 
-Pilns apraksts: https://docs.google.com/document/d/1Yfifwk9__MplxGkaBP_m3wLN-BtsixBauGORpAGZ0Tk/edit?tab=t.0
+Pilns apraksts: https://drive.google.com/drive/folders/1w2mN7vlKkq-xyDDOelwyiZb-uZGl705x?usp=share_link
 
 Ideja:
 2D "street race" tipa spēle, kurā spēlētāji braukās pa Ķīpsalas ielām, nākotnē pa Rīgas ielām, ievērojot drošas braukšanas noteikumus. Spēle ir paredzēta jauniešiem līdz 16 gadiem, kas vēl nevar mācīties vadīt auto, piedāvājot izklaidējošu un izglītojošu pieredzi.
