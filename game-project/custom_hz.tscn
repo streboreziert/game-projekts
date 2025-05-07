@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://csjjb6f0y64pc"]
+
+[ext_resource type="Script" uid="uid://cf7quxf5jaddt" path="res://mainScript.gd" id="1_ycfmv"]
+[ext_resource type="PackedScene" uid="uid://cnb6j21l6aroy" path="res://Demo/Scenes/TestUI.tscn" id="3_w4syp"]
+[ext_resource type="PackedScene" uid="uid://cojdqjvrvv0t7" path="res://Demo/Scenes/TestVehicles/CarSport.tscn" id="4_uai2u"]
+
+[node name="Custom hz" type="Node2D"]
+script = ExtResource("1_ycfmv")
+player = NodePath("Car")
+
+[node name="TestUI" parent="." instance=ExtResource("3_w4syp")]
+
+[node name="Car" parent="." instance=ExtResource("4_uai2u")]
