@@ -18,8 +18,3 @@ func _input(event):
 		target_zoom = clamp(zoom.x * 1.2, max_zoom, min_zoom)
 	elif event.is_action_pressed("zoom_out"):
 		target_zoom = clamp(zoom.x * 0.8, max_zoom, min_zoom)
-	elif event.is_action_pressed("zoom_step"):
-		if zoom.x >= min_zoom * 0.8:
-			target_zoom = max_zoom
-		else:
-			target_zoom = clamp(zoom.x * 1.5, max_zoom, min_zoom)
