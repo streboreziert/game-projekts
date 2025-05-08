@@ -1,16 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://c652qcfsxjftw"]
+[gd_scene load_steps=4 format=3 uid="uid://c652qcfsxjftw"]
 
-[ext_resource type="Script" uid="uid://cf7quxf5jaddt" path="res://mainScript.gd" id="1_feb5d"]
-[ext_resource type="PackedScene" uid="uid://csjjb6f0y64pc" path="res://custom_hz.tscn" id="3_7jktm"]
-[ext_resource type="PackedScene" uid="uid://de2c0ef68vwfn" path="res://kipsala new/map.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://dlfxurhepsri8" path="res://Demo/Scenes/ChaseCamera.tscn" id="3_ryrav"]
+[ext_resource type="Script" path="res://mainScript.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://de2c0ef68vwfn" path="res://map.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://csjjb6f0y64pc" path="res://custom_hz.tscn" id="3_yyuat"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_feb5d")
 
-[node name="Custom hz" parent="." instance=ExtResource("3_7jktm")]
-position = Vector2(-161, 103)
-camera_scene = ExtResource("3_ryrav")
-
 [node name="map" parent="." instance=ExtResource("3_feb5d")]
 scale = Vector2(6.5, 6.5)
+
+[node name="Custom_hz" parent="." instance=ExtResource("3_yyuat")]
+position = Vector2(-2712, -127)
