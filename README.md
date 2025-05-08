@@ -1,6 +1,6 @@
 # Riga Traffic Simulator
 
-Godot 2D spēle, kurā simulēta satiksmes uzvedība ar luksoforiem, automašīnām un sodu sistēmu.
+Riga Traffic Simulator ir interaktīva 2D simulācija, veidota ar Godot Engine, kurā tiek modelēta reālistiska pilsētas satiksme. Projekts ietver viedus luksoforus, transportlīdzekļu detektēšanu, un automātisku sodu piešķiršanu par ceļu satiksmes pārkāpumiem. Simulācija ļauj analizēt braukšanas uzvedību dažādās luksofora fāzēs (zaļā, dzeltenā, sarkanā), un ir lielisks rīks gan mācību, gan spēļu prototipu izstrādei.
 
 ##  Kā palaist
 
