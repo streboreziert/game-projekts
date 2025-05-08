@@ -11,3 +11,4 @@ player = NodePath("Car")
 [node name="TestUI" parent="." instance=ExtResource("3_w4syp")]
 
 [node name="Car" parent="." instance=ExtResource("4_uai2u")]
+min_skid_speed = 10000

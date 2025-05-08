@@ -8,8 +8,11 @@ const HP_PER_NMS = 0.001341022089595
 @onready var speed = $MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/SpeedOutput
 @onready var gear_label = $MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/GearLabel
 @onready var power_hp = $MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/PowerHPLabel
+@onready var score = $MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/scoreLabel
+
 
 func update_stats(stats):
+	score.text = String.num(int(stats["points"])) + " / 16"
 	speed.text = "%05.0f" % stats["forward_speed"]
 	power_hp.text = "%05.0f" % abs(stats["power"] * HP_PER_NMS)
 	throttle_bar.value = stats["throttle"] * 100

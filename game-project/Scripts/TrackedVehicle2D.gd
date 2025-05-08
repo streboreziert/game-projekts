@@ -1,10 +1,15 @@
 extends TestVehicle2D
 class_name TrackedVehicle2D
 
+signal penalty(n)
+var speeding = false
 func _process(delta):
+	
 	super(delta)
 	if linear_velocity.length() > 1:
 		_update_tracks()
+	
+	
 
 func _update_tracks():
 	for track in wheels:

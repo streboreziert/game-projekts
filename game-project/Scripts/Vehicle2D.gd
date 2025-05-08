@@ -140,3 +140,9 @@ func _update_driven_wheel_count():
 func _update_current(new_value):
 	current = new_value
 	emit_signal("current_changed", current)
+	
+	
+func teleport_to_beginning():
+	print("trying")
+	global_position = Vector2(0, 0)
+	
