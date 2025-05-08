@@ -12,8 +12,6 @@ enum gears {
 @export_node_path("Node2D") var camera_origin
 var camera: Camera2D
 
-@onready var body = $CarBody
-
 signal status_updated
 
 func _ready():

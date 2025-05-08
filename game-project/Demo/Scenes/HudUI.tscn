@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5aitxvbc2weg"]
 
-[ext_resource type="Script" uid="uid://fa0uxwv81fhj" path="res://Demo/Scripts/HudUI.gd" id="1_0sli4"]
+[ext_resource type="Script" path="res://Demo/Scripts/HudUI.gd" id="1_0sli4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owlwl"]
 content_margin_left = 0.0
@@ -101,7 +101,7 @@ allow_greater = true
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Speed (px/s)"
+text = "Speed (km/h)"
 horizontal_alignment = 2
 
 [node name="SpeedOutput" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer"]

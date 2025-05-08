@@ -75,7 +75,7 @@ func _on_area_2d_body_exited(body):
 	print("⬅️", body.name, " exited zone.")
 	if current_state == State.RED:
 		print("❌ PENALTY! Red light crossed.")
-		punish.emit(1)
+		punish.emit(4)
 	else:
 		print("✅ Safe crossing.")
 
