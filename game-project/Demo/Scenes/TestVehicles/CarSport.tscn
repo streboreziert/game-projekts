@@ -96,7 +96,6 @@ rotation = 1.57079
 texture = ExtResource("4_gb2x7")
 
 [node name="CameraOrigin" type="Node2D" parent="."]
-rotation = 1.31598
 
 [node name="Top-car-view-png-34876" type="Sprite2D" parent="."]
 z_index = 5

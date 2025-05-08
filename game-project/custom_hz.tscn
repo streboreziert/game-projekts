@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cnb6j21l6aroy" path="res://Demo/Scenes/TestUI.tscn" id="3_w4syp"]
 [ext_resource type="PackedScene" uid="uid://cojdqjvrvv0t7" path="res://Demo/Scenes/TestVehicles/CarSport.tscn" id="4_uai2u"]
 
-[node name="Custom hz" type="Node2D"]
+[node name="Custom_hz" type="Node2D"]
 script = ExtResource("1_ycfmv")
 player = NodePath("Car")
 

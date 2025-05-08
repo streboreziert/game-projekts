@@ -12,3 +12,7 @@ func _ready():
 		player.current = true
 		player.gear = TestVehicle2D.gears.NEUTRAL
 		player.camera.set_process(false)
+
+
+#func _on_sign_punish(n: Variant) -> void:
+	#player.score(n)
