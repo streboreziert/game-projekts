@@ -14,5 +14,5 @@ func _ready():
 		player.camera.set_process(false)
 
 
-#func _on_sign_punish(n: Variant) -> void:
-	#player.score(n)
+func _on_sign_punish(n: Variant) -> void:
+	player.score(n)

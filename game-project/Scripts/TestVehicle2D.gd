@@ -108,7 +108,3 @@ func score(n):
 	if points >= 16:
 		points = 0
 		print("game over")
-		#teleport_to_beginning()
-
-#func _on_sign_punish(n: Variant) -> void:
-	#score(n)

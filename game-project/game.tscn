@@ -3,14 +3,17 @@
 [ext_resource type="Script" uid="uid://cf7quxf5jaddt" path="res://mainScript.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://csjjb6f0y64pc" path="res://custom_hz.tscn" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://de2c0ef68vwfn" path="res://kipsala new/map.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://dlfxurhepsri8" path="res://Demo/Scenes/ChaseCamera.tscn" id="3_ryrav"]
+[ext_resource type="PackedScene" uid="uid://cgbputpuirplf" path="res://punishments/sign.tscn" id="4_fc0e3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_feb5d")
 
 [node name="Custom hz" parent="." instance=ExtResource("3_7jktm")]
 position = Vector2(-161, 103)
-camera_scene = ExtResource("3_ryrav")
 
 [node name="map" parent="." instance=ExtResource("3_feb5d")]
 scale = Vector2(6.5, 6.5)
+
+[node name="Sign" parent="map" instance=ExtResource("4_fc0e3")]
+position = Vector2(-12.7692, 57.6923)
+scale = Vector2(0.21376, -0.211952)
