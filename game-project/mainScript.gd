@@ -16,3 +16,7 @@ func _ready():
 
 func _on_sign_punish(n: Variant) -> void:
 	player.score(n)
+
+
+func _on_stop_zone_punish(n: Variant) -> void:
+	pass # Replace with function body.

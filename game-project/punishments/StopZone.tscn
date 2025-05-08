@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://wlrqjj5o6q5m"]
+
+[ext_resource type="Script" uid="uid://gn74fqpccqwc" path="res://punishments/StopZone.gd" id="1_83gx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6kv3"]
+size = Vector2(415, 236)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_83gx3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(199, 170)
+rotation = -0.00463978
+scale = Vector2(0.994234, 0.0854779)
+shape = SubResource("RectangleShape2D_v6kv3")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Red" type="ColorRect" parent="."]
+offset_left = -68.4453
+offset_top = 140.803
+offset_right = -28.4453
+offset_bottom = 180.803
+rotation = -0.00718358
+color = Color(0.951973, 0.265851, 0.324871, 1)
+
+[node name="Yellow" type="ColorRect" parent="."]
+offset_left = -68.3876
+offset_top = 100.788
+offset_right = -28.3876
+offset_bottom = 140.788
+rotation = -0.00818549
+color = Color(1, 1, 0.101961, 1)
+
+[node name="Green" type="ColorRect" parent="."]
+offset_left = -68.6988
+offset_top = 60.7036
+offset_right = -28.6988
+offset_bottom = 100.704
+rotation = -0.00598703
+color = Color(0.463101, 0.797301, 0.253317, 1)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
